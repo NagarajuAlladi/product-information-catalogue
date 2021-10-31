@@ -8,6 +8,7 @@ import InputBase from "@mui/material/InputBase";
 import SearchIcon from "@mui/icons-material/Search";
 import AppsIcon from "@mui/icons-material/Apps";
 import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
+import { Box } from "@mui/system";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",

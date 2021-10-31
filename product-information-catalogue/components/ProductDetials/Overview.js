@@ -1,22 +1,43 @@
-import { Typography } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
 import OverviewTable from "./OverviewTable";
+import { useTheme } from "@mui/material/styles";
+import Channels from "./Channels";
 
 function Overview() {
+  const theme = useTheme();
   return (
     <div>
-      <Box>
-        <Box sx={{mt:'1rem'}}>
-          <Typography variant="h6">
-            <b>Completeness overview</b>
-          </Typography>
-          <Typography variant="caption">
-            Product last edit on 14.08.2021 at 11:00AM
-          </Typography>
-          <OverviewTable/>
-        </Box>
-      </Box>
+      <Grid container sx={{mt:'1.5rem'}}>
+        <Grid item xs={10}>
+          <Box>
+            <Typography variant="h6">
+              <b>Completeness overview</b>
+            </Typography>
+            <Typography variant="caption">
+              Product last edit on 14.08.2021 at 11:00AM
+            </Typography>
+            <OverviewTable />
+          </Box>
+          <Box>
+            <Channels/>
+          </Box>
+        </Grid>
+        <Grid item xs={2}>
+          <Box
+            sx={{
+              width: "13rem",
+              height: "25rem",
+              backgroundColor: theme.palette.secondary.main,
+              ml:'2rem'
+            }}
+          >
+            Hello
+          </Box>
+        </Grid>
+        
+      </Grid>
     </div>
   );
 }

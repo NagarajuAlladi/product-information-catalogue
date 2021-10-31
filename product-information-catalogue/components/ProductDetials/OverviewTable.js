@@ -9,11 +9,11 @@ import Paper from "@mui/material/Paper";
 import SettingsIcon from "@mui/icons-material/Settings";
 import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 import { Box } from "@mui/system";
-import { Checkbox, Typography } from "@mui/material";
+import { Avatar, Checkbox, Typography } from "@mui/material";
 import ArrowDropDownOutlinedIcon from "@mui/icons-material/ArrowDropDownOutlined";
 
-function createData(name, calories, fat, carbs, protein) {
-  return { name, calories, fat, carbs, protein };
+function createData(name, lastedit, overall, settings) {
+  return { name, lastedit, overall, settings };
 }
 
 const rows = [
@@ -25,7 +25,7 @@ const rows = [
 export default function OverviewTable() {
   return (
     <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 650 }} aria-label="simple table">
+      <Table sx={{ minWidth: "auto" }} aria-label="simple table">
         <TableHead>
           <TableRow>
             <TableCell>VARIENT</TableCell>
@@ -54,10 +54,18 @@ export default function OverviewTable() {
               sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
             >
               <TableCell component="th" scope="row">
-                {row.name}
+                <Box sx={{display:'flex',alignItems:'center'}}>
+                  <Avatar
+                    sx={{ width: "2rem", height: "2rem" }}
+                    alt="Remy Sharp"
+                    src={row.image}
+                    variant="square"
+                  />
+                  &nbsp;&nbsp;{row.name}
+                </Box>
               </TableCell>
-              <TableCell align="right">{row.calories}</TableCell>
-              <TableCell align="right">{row.fat}</TableCell>
+              <TableCell align="right">{row.lastedit}</TableCell>
+              <TableCell align="right">{row.overall}</TableCell>
               <TableCell align="right">
                 <Box
                   sx={{
@@ -66,8 +74,8 @@ export default function OverviewTable() {
                     justifyContent: "flex-end",
                   }}
                 >
-                 Edit
-                  <ArrowDropDownOutlinedIcon sx={{ml:'2rem'}} />
+                  Edit
+                  <ArrowDropDownOutlinedIcon sx={{ ml: "2rem" }} />
                 </Box>
               </TableCell>
             </TableRow>

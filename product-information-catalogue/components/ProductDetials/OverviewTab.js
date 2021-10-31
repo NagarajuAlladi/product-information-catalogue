@@ -15,6 +15,8 @@ import {
 import { Box, color } from "@mui/system";
 import { useTheme } from "@mui/material/styles";
 import Overview from "./Overview";
+import Channels from "./Channels";
+import Varients from "./Varients";
 
 
 //components
@@ -175,7 +177,7 @@ function OverviewTab() {
       ) : null}
 
       {currentNavigation === "Common information" ? <>Common information</> : null}
-      {currentNavigation === "Varients" ? <>Varients</> : null}
+      {currentNavigation === "Varients" ? <><Varients/></> : null}
       {currentNavigation === "Associations" ? <>Associations</> : null}
       {currentNavigation === " Internal info" ? <> Internal info</> : null}
       {currentNavigation === "Activity" ? <>Activity</> : null}
