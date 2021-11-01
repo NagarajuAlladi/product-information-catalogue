@@ -118,7 +118,7 @@ export default function StylesTable() {
           component={Paper}
         >
           <Table size="small">
-            <TableHead>
+            <TableHead sx={{backgroundColor:'rgb(242, 245, 252)'}}>
               <TableRow>
                 <TableCell>
                   <Box

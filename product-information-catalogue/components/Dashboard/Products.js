@@ -173,7 +173,7 @@ function Products() {
         <>
           <Searchbar />
           <ChipsArray />
-         <StylesTab/>
+          <StylesTab />
         </>
       ) : null}
 

@@ -11,9 +11,11 @@ import FileDownloadOutlinedIcon from "@mui/icons-material/FileDownloadOutlined";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowDropDownTwoToneIcon from "@mui/icons-material/ArrowDropDownTwoTone";
 import CheckIcon from '@mui/icons-material/Check';
+import { useRouter } from "next/router";
 
 function Navbar() {
   const theme = useTheme();
+  const router = useRouter();
   return (
     <>
       <Box
@@ -27,7 +29,7 @@ function Navbar() {
         }}
       >
         <Box  sx={{ display: "flex", alignItems: "center" }}>
-          <ArrowBackIcon />
+          <ArrowBackIcon onClick={() => router.push("/")}/>
           <Typography variant="h5">
             <b>Cara RN Sweat</b>
           </Typography>

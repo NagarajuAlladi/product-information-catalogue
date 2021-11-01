@@ -1,4 +1,11 @@
-import { Button, Divider, Grid, Typography } from "@mui/material";
+import {
+  Button,
+  Divider,
+  Grid,
+  MenuItem,
+  Select,
+  Typography,
+} from "@mui/material";
 import { Box } from "@mui/system";
 import React, { useState } from "react";
 import ArrowDropDownTwoToneIcon from "@mui/icons-material/ArrowDropDownTwoTone";
@@ -15,29 +22,46 @@ function Varients() {
   // const [currentNavigation, setCurrentNavigation] = useState(
   //   "General Information"
   // );
+  const [brand, setBrand] = React.useState("");
+  const [country, setCountry] = React.useState("");
+  const [complete,setComplete]=React.useState("")
+
+
+  const handleChangeBrand = (event) => {
+    setBrand(event.target.value);
+  };
+  const handleChangeCountry=(event)=>{
+    setCountry(e.target.value);
+  }
+  const handleChangeComplete=(event)=>{
+    setCountry(e.target.value);
+  }
   const theme = useTheme();
   return (
     <Box sx={{ mt: "1rem" }}>
       <Grid container spacing={8}>
         <Grid item xs={2}>
           <Box>
-            <Box
-              sx={{
-                border: "1px solid gray",
-                width: "auto",
-                height: "3rem",
-                display: "flex",
-                p: "0.1rem 0.5rem",
-                justifyContent: "space-between",
-                alignItems: "center",
-              }}
-            >
-              <Typography variant="">Cubus-online</Typography>
-              <ArrowDropDownTwoToneIcon />
+            <Box>
+              <Select
+                labelId="demo-simple-select-label"
+                id="demo-simple-select"
+                displayEmpty
+                value={brand}
+                onChange={handleChangeBrand}
+                sx={{ width: "13rem", height: "3rem" }}
+              >
+                <MenuItem disabled value="">
+                  <em>Cubus-online</em>
+                </MenuItem>
+                <MenuItem value={10}>Filter</MenuItem>
+                <MenuItem value={20}>Filter</MenuItem>
+                <MenuItem value={30}>Filter</MenuItem>
+              </Select>
             </Box>
             <Box sx={{ mt: "1rem" }}>
               <TreeView>
-                <TreeItem nodeId="1" label="312 / DarkBlue" >
+                <TreeItem nodeId="1" label="312 / DarkBlue">
                   <TreeItem
                     nodeId="2"
                     label="General Information"
@@ -91,7 +115,7 @@ function Varients() {
         </Grid>
         <Grid item xs={7}>
           <Box sx={{ display: "flex" }}>
-            <Box
+            {/* <Box
               sx={{
                 border: "1px solid gray",
                 width: "12rem",
@@ -105,8 +129,25 @@ function Varients() {
             >
               <Typography variant="">Norge/NOK</Typography>
               <ArrowDropDownTwoToneIcon />
+            </Box> */}
+            <Box>
+              <Select
+                labelId="demo-simple-select-label"
+                id="demo-simple-select"
+                displayEmpty
+                value={country}
+                onChange={handleChangeCountry}
+                sx={{ width: "13rem", height: "3rem", mr: "0.5rem" }}
+              >
+                <MenuItem disabled value="">
+            <em>Norge/NOK</em>
+          </MenuItem>
+                <MenuItem value={10}>Filter</MenuItem>
+                <MenuItem value={20}>Filter</MenuItem>
+                <MenuItem value={30}>Filter</MenuItem>
+              </Select>
             </Box>
-            <Box
+            {/* <Box
               sx={{
                 border: "1px solid gray",
                 width: "12rem",
@@ -119,6 +160,19 @@ function Varients() {
             >
               <Typography variant="">80%Complete</Typography>
               <MoreVertIcon fontSize="small" />
+            </Box> */}
+            <Box>
+              <Select
+                labelId="demo-simple-select-label"
+                id="demo-simple-select"
+                value={complete}
+                onChange={handleChangeComplete}
+                sx={{ width: "13rem", height: "3rem" }}
+              >
+                <MenuItem value={10}>Filter</MenuItem>
+                <MenuItem value={20}>Filter</MenuItem>
+                <MenuItem value={30}>Filter</MenuItem>
+              </Select>
             </Box>
           </Box>
           <Box sx={{ mt: "1rem" }}>
@@ -136,22 +190,22 @@ function Varients() {
             {currentNavigation === "Status & Publishing" ? (
               <>Status & Publishing</>
             ) : null} */}
-            <GeneralInformation/>
-            <Divider sx={{mt:'2rem'}} />
-            <ProductPhotos/>
-            <Divider sx={{mt:'2rem'}} />
-            <VarientAttribute/>
-            <Divider sx={{mt:'2rem'}} />
-            <SEO/>
-            <Divider sx={{mt:'2rem'}} />
-            <VarientSizes/>
+            <GeneralInformation />
+            <Divider sx={{ mt: "2rem" }} />
+            <ProductPhotos />
+            <Divider sx={{ mt: "2rem" }} />
+            <VarientAttribute />
+            <Divider sx={{ mt: "2rem" }} />
+            <SEO />
+            <Divider sx={{ mt: "2rem" }} />
+            <VarientSizes />
           </Box>
         </Grid>
         <Grid item xs={3}>
           <Button
             variant="contained"
             size="small"
-            sx={{ width: "auto", ml: "2rem", }}
+            sx={{ width: "auto", ml: "2rem" }}
           >
             Preview
           </Button>

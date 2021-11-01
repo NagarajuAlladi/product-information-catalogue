@@ -1,6 +1,6 @@
 const palette = {
     primary: {
-        dark: "hsl(298, 31%, 16%)",
+        dark: "rgb(28,33,44)",
         main: "hsla(161, 100%, 37%, 1)",
         light: "hsla(161, 100%, 37%, 1)",
         // disabled: {
@@ -9,7 +9,7 @@ const palette = {
         // }
     },
     secondary: {
-        main: "hsla(161, 100%, 8%, 1)",
+        main: "rgb(28,33,44)",
     },
     gray: {
         main: "#f8f8f8",

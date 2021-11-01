@@ -44,7 +44,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-function Searchbar() {
+function DigitalAssetManagementSearchbar() {
   const [age, setAge] = React.useState("");
 
   const handleChange = (event) => {
@@ -88,4 +88,4 @@ function Searchbar() {
   );
 }
 
-export default Searchbar;
+export default DigitalAssetManagementSearchbar;
