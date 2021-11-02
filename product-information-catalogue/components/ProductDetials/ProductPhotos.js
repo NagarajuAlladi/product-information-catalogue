@@ -2,8 +2,13 @@ import { Button, Grid, TextField, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
+import GenerateForm from "../Forms/GenerateForm";
+import {PRODUCT_PHOTOS} from '../../utils/forms/form-config'
+import { useState, useEffect, useRef } from "react";
 
 function ProductPhotos() {
+  const ref = useRef(null);
+  const [disabled, setDisabled] = useState(false);
   return (
     <div>
       <Box
@@ -64,21 +69,27 @@ function ProductPhotos() {
           }}
         />
       </Grid>
-      <Grid container mt='1rem'>
-        <Grid item xs={6}>
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-            }}
-          >
-            <label>
-              <Typography variant="">Model features</Typography>
-            </label>
-            <TextField size="small" value='182 cm/ M size' />
-          </Box>
-        </Grid>
-      </Grid>
+     
+        
+          <Box sx={{mt:'1rem'}}>
+            <GenerateForm
+              fields={PRODUCT_PHOTOS}
+              ref={ref}
+              spacing={6}
+              submitLabel={"+Add product feature"}
+              disableIfInvalid
+              // buttonsDisabled={disabled}
+              // onSubmit={(val) => console.log("values", val)}
+              // onSubmit={(val) => {
+              //   dispatch(addUser({ ...val }));
+              //   console.log("values", val);
+
+              //   console.log("form values", formdata);
+              // }}
+              onChange={(values) => console.log("handle change values", values)}
+            />
+         </Box>
+      
     </div>
   );
 }

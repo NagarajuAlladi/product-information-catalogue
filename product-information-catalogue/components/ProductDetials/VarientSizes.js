@@ -1,9 +1,14 @@
-import { Grid, TextField, Typography } from '@mui/material'
-import { Box } from '@mui/system'
-import React from 'react'
+import { Grid, TextField, Typography } from "@mui/material";
+import { Box } from "@mui/system";
+import React from "react";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
+import GenerateForm from "../Forms/GenerateForm";
+import {VARIENT_SIZES} from '../../utils/forms/form-config'
+import { useState, useEffect, useRef } from "react";
 
 function VarientSizes() {
+  const ref = useRef(null);
+  const [disabled, setDisabled] = useState(false);
   return (
     <div>
       <Grid container justifyContent="space-between" mt="1rem">
@@ -20,25 +25,25 @@ function VarientSizes() {
         </Grid>
       </Grid>
       <Box mt="1rem">
-        <Grid container spacing={8}>
-          <Grid item xs={4}>
-            <Box
-              sx={{
-                display: "flex",
-                flexDirection: "column",
-              }}
-            >
-              <label>
-                <Typography variant="">Size Type</Typography>
-              </label>
-              <TextField size="small" value="European" />
-            </Box>
-          </Grid>
-          
-        </Grid>
+        <GenerateForm
+          fields={VARIENT_SIZES}
+          ref={ref}
+          spacing={6}
+          // submitLabel={"+Add product features"}
+          disableIfInvalid
+          // buttonsDisabled={disabled}
+          // onSubmit={(val) => console.log("values", val)}
+          // onSubmit={(val) => {
+          //   dispatch(addUser({ ...val }));
+          //   console.log("values", val);
+
+          //   console.log("form values", formdata);
+          // }}
+          onChange={(values) => console.log("handle change values", values)}
+        />
       </Box>
     </div>
-  )
+  );
 }
 
-export default VarientSizes
+export default VarientSizes;

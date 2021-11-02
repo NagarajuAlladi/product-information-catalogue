@@ -25,7 +25,7 @@ const rows = [
 export default function OverviewTable() {
   return (
     <TableContainer component={Paper}>
-      <Table sx={{ minWidth: "auto" }} aria-label="simple table">
+      <Table size='small' sx={{ minWidth: "auto" }} aria-label="simple table">
         <TableHead>
           <TableRow>
             <TableCell>VARIENT</TableCell>

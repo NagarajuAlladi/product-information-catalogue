@@ -2,8 +2,13 @@ import { Button, Grid, TextField, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
+import GenerateForm from "../Forms/GenerateForm";
+import {SEO_FORM} from '../../utils/forms/form-config'
+import { useState, useEffect, useRef } from "react";
 
 function SEO() {
+  const ref = useRef(null);
+  const [disabled, setDisabled] = useState(false);
   return (
     <div>
       <Grid container justifyContent="space-between" mt="1rem">
@@ -20,60 +25,25 @@ function SEO() {
         </Grid>
       </Grid>
       <Box mt="1rem">
-        <Grid container spacing={8}>
-          <Grid item xs={12}>
-            <Box
-              sx={{
-                display: "flex",
-                flexDirection: "column",
-              }}
-            >
-              <label>
-                <Typography variant="">SEO Title</Typography>
-              </label>
-              <TextField size="small" value="L Cara R N Sweat" />
-            </Box>
-          </Grid>
-          <Grid item xs={12}>
-            <Box
-              sx={{
-                display: "flex",
-                flexDirection: "column",
-              }}
-            >
-              <label>
-                <Typography variant="">SEO Description</Typography>
-              </label>
-              <TextField size="small"  multiline rows={4} value='Dark Blue'/>
-            </Box>
-          </Grid>
-          <Grid item xs={12}>
-            <Box
-              sx={{
-                display: "flex",
-                flexDirection: "column",
-              }}
-            >
-              <label>
-                <Typography variant="">SEO Keywords</Typography>
-              </label>
-              <TextField size="small" />
-            </Box>
-          </Grid>
-          <Grid item xs={12}>
-            <Box
-              sx={{
-                display: "flex",
-                flexDirection: "column",
-              }}
-            >
-              <label>
-                <Typography variant="">Preview</Typography>
-              </label>
-              <TextField size="small"  multiline rows={4} />
-            </Box>
-          </Grid>
-        </Grid>
+      <Box sx={{mt:'1rem'}}>
+            <GenerateForm
+              fields={SEO_FORM}
+              ref={ref}
+              spacing={6}
+              // submitLabel={"+Add product features"}
+              disableIfInvalid
+              // buttonsDisabled={disabled}
+              // onSubmit={(val) => console.log("values", val)}
+              // onSubmit={(val) => {
+              //   dispatch(addUser({ ...val }));
+              //   console.log("values", val);
+
+              //   console.log("form values", formdata);
+              // }}
+              onChange={(values) => console.log("handle change values", values)}
+            />
+         </Box>
+      
       </Box>
     </div>
   );

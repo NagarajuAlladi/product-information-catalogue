@@ -51,7 +51,7 @@ function Varients() {
                 sx={{ width: "13rem", height: "3rem" }}
               >
                 <MenuItem disabled value="">
-                  <em>Cubus-online</em>
+                  Cubus-online
                 </MenuItem>
                 <MenuItem value={10}>Filter</MenuItem>
                 <MenuItem value={20}>Filter</MenuItem>

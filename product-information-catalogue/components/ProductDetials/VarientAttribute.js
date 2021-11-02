@@ -2,8 +2,13 @@ import { Button, Grid, TextField, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
+import GenerateForm from "../Forms/GenerateForm";
+import { VARIENT_ATTRIBUTES } from "../../utils/forms/form-config";
+import { useState, useEffect, useRef } from "react";
 
 function VarientAttribute() {
+  const ref = useRef(null);
+  const [disabled, setDisabled] = useState(false);
   return (
     <div>
       <Grid container justifyContent="space-between" mt="1rem">
@@ -20,7 +25,24 @@ function VarientAttribute() {
         </Grid>
       </Grid>
       <Box mt="1rem">
-        <Grid container spacing={8}>
+
+      <GenerateForm
+          fields={VARIENT_ATTRIBUTES}
+          ref={ref}
+          spacing={6}
+          // submitLabel={"+Add product features"}
+          disableIfInvalid
+          // buttonsDisabled={disabled}
+          // onSubmit={(val) => console.log("values", val)}
+          // onSubmit={(val) => {
+          //   dispatch(addUser({ ...val }));
+          //   console.log("values", val);
+
+          //   console.log("form values", formdata);
+          // }}
+          onChange={(values) => console.log("handle change values", values)}
+        />
+        {/* <Grid container spacing={8}>
           <Grid item xs={6}>
             <Box
               sx={{
@@ -76,7 +98,7 @@ function VarientAttribute() {
               <TextField size="small" value="299" />
             </Box>
           </Grid>
-        </Grid>
+        </Grid> */}
       </Box>
     </div>
   );

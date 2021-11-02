@@ -130,311 +130,182 @@ export const LOGIN_FORM = [
   },
 ];
 
-export const DEPARTMENT_FORM = [
+export const GENERAL_INFORMATION = [
   {
     type: "text",
-    label: "Department Name",
-    name: "departmentName",
+    label: "Brand Name",
+    name: "brandName",
     required: true,
+    colWidth: 6,
   },
   {
     type: "text",
-    label: "Department Code",
-    name: "departmentCode",
+    label: "Default Name",
+    name: "defaultName",
     required: true,
+    colWidth: 6,
   },
-  {
-    type: "text",
-    label: "Department Head",
-    name: "departmentHead",
-    required: true,
-  },
-];
 
-export const ACCOUNT_FORM = [
   {
     type: "text",
-    label: "Name",
-    name: "name",
+    label: "Description",
+    name: "descripetion",
     required: true,
+    colWidth: 12,
   },
   {
-    type: "text",
-    label: "Email",
-    name: "email",
-    required: EMAIL_VALIDATOR,
-  },
-  {
-    type: "password",
-    label: "Password",
-    name: "password",
-    validations: PASSWORD_VALIDATOR,
-  },
-  {
-    type: "text",
-    label: "Conatct No",
-    name: "contactNo",
-    required: PHONE_VALIDATOR,
-  },
-];
-
-export const SEAT_FORM = [
-  {
-    type: "text",
-    label: "Seat Title",
-    name: "name",
-    required: true,
-  },
-  {
-    name: "expiryDate",
-    type: "date",
-    label: "Expiry Date",
-    validations: Yup.string().required("Date is Required."),
-  },
-];
-
-export const INTERVIEW_FORM = [
-  {
-    name: "round",
+    name: "fit",
     type: "select",
     required: true,
     options: [
       {
-        label: "Round 1",
-        value: "round1",
+        label: "Slim Fit",
+        value: "slimFit",
       },
       {
-        label: "Round 2",
-        value: "round2",
+        label: "XL",
+        value: "xl",
       },
       {
-        label: "HR",
-        value: "hr",
+        label: "XXL",
+        value: "xxl",
       },
     ],
-    label: "Round",
+    label: "Fit",
+    colWidth: 4,
   },
   {
-    name: "modeOfInterview",
-    type: "select",
+    type: "text",
+    label: "Composition",
+    name: "Composition",
     required: true,
-    options: [
-      {
-        label: "OnSite",
-        value: "onSite",
-      },
-      {
-        label: "Virtual",
-        value: "virtual",
-      },
-    ],
-    label: "Mode Of Interview",
+    colWidth: 8,
   },
   {
-    name: "time",
-    type: "time",
-    label: "Start Time",
-    required: "true",
+    type: "text",
+    label: "Washing Information",
+    name: "washingInformtion",
+    required: true,
+    colWidth: 12,
+    rows: 4,
   },
   {
-    name: "date",
-    type: "date",
-    label: "Date",
-    validations: Yup.string().required("Date is Required."),
+    type: "text",
+    label: "Care",
+    name: "care",
+    required: true,
+    colWidth: 12,
   },
 ];
 
-export const COMMENT_FORM = [
+export const VARIENT_ATTRIBUTES = [
   {
-    type: "textarea",
-    label: "Note",
-    name: "note",
+    type: "text",
+    label: "Color",
+    name: "color",
     required: true,
-    additionalConfig: {
-      rows: 4,
-    },
+    colWidth: 6,
+  },
+  {
+    name: "colorCode",
+    type: "select",
+    required: true,
+    options: [
+      {
+        label: "312/Drak Blue",
+        value: "darkBlue",
+      },
+      {
+        label: "Blue",
+        value: "blue",
+      },
+      {
+        label: "White",
+        value: "white",
+      },
+    ],
+    label: "Color Code",
+    colWidth: 6,
+  },
+  {
+    name: "season",
+    type: "select",
+    required: true,
+    options: [
+      {
+        label: "Autumn/Winter 2018",
+        value: "winter",
+      },
+      {
+        label: "Rainy",
+        value: "Rainy",
+      },
+    ],
+    label: "Season",
+    colWidth: 6,
+  },
+  {
+    type: "text",
+    label: "Price(USD)",
+    name: "price",
+    required: true,
+    colWidth: 6,
   },
 ];
 
-export const SIGNUP_FORM = [
+export const PRODUCT_PHOTOS = [
   {
     type: "text",
-    label: "First Name",
-    name: "firstName",
-    colWidth: 6,
-    validations: Yup.string().required("First name is Required."),
-  },
-  {
-    type: "text",
-    label: "Last Name",
-    name: "lastName",
-    colWidth: 6,
-    validations: Yup.string().required("Last name is Required."),
-  },
-  {
-    type: "text",
-    label: "Email",
-    name: "email",
-    colWidth: 6,
-    validations: EMAIL_VALIDATOR,
-  },
-  {
-    name: "date",
-    type: "date",
-    label: "Date",
-    colWidth: 6,
-    validations: Yup.string().required("Date is Required."),
-  },
-  {
-    type: "text",
-    label: "Mobile Number",
-    name: "mobileNumber",
-    colWidth: 6,
-    validations: Yup.string().required("Mobile Number is Required."),
-  },
-  {
-    type: "text",
-    label: "Alternate Mobile Number",
-    name: "alternateMobileNumber",
-    colWidth: 6,
-  },
-  {
-    name: "expirence",
-    type: "select",
-    colWidth: 6,
-    required: true,
-    options: [
-      {
-        label: "<1 year",
-        value: "lessthanOne",
-      },
-      {
-        label: "1 year",
-        value: "One",
-      },
-      {
-        label: "2 year",
-        value: "Two",
-      },
-    ],
-    label: "Expirence",
-  },
-  {
-    type: "text",
-    label: "Year Of Graduation",
-    name: "yearOfGraduation",
-    colWidth: 6,
-    validations: Yup.string().required("Year Of Graduation is Required."),
-  },
-  {
-    name: "backlogs",
-    type: "select",
-    colWidth: 6,
-    required: true,
-    options: [
-      {
-        label: "Yes",
-        value: "yes",
-      },
-      {
-        label: "No",
-        value: "no",
-      },
-    ],
-    label: "Backlog(s) If Any",
-  },
-  {
-    type: "text",
-    label: "Current Annual CTC",
-    name: "ctc",
-    colWidth: 6,
-    validations: Yup.string().required("Current Annual CTC is Required."),
-  },
-  {
-    type: "text",
-    label: "Position Applied For",
-    name: "position",
-    colWidth: 6,
-    validations: Yup.string().required("Applied Position is Required."),
-  },
-  {
-    name: "noticePeriod",
-    type: "select",
+    label: "Model Features",
+    name: "features",
     required: true,
     colWidth: 6,
-    options: [
-      {
-        label: "Immediate Joiner",
-        value: "immediate",
-      },
-      {
-        label: "<15days",
-        value: "15",
-      },
-      {
-        label: "One Month",
-        value: "One",
-      },
-      {
-        label: "Two Months",
-        value: "Two",
-      },
-    ],
-    label: "Notice Period",
-  },
-  {
-    name: "source",
-    type: "select",
-    colWidth: 6,
-    required: true,
-    options: [
-      {
-        label: "Facebook",
-        value: "facebook",
-      },
-      {
-        label: "LinkedIn",
-        value: "linkedin",
-      },
-      {
-        label: "Monstar",
-        value: "monstar",
-      },
-      {
-        label: "Others",
-        value: "others",
-      },
-    ],
-    label: "Source",
-  },
-  {
-    type: "text",
-    label: "Job Code",
-    name: "jobCode",
-    colWidth: 6,
-    validations: Yup.string().required("Job Code is Required."),
-  },
-  {
-    type: "text",
-    colWidth: 6,
-    label: "Current Location",
-    name: "currentLocation",
-    validations: Yup.string().required("Current Location is Required."),
   },
 ];
 
-
-export const LOGIN=[
+export const SEO_FORM = [
   {
     type: "text",
-    label: "Email",
-    name: "email",
-    required: EMAIL_VALIDATOR,
+    label: "SEO Title",
+    name: "seo",
+    required: true,
+    colWidth: 12,
   },
   {
-    type: "password",
-    label: "Password",
-    name: "password",
-    validations: PASSWORD_VALIDATOR,
+    type: "text",
+    label: "SEO Description",
+    name: "seoDescription",
+    required: true,
+    colWidth: 12,
   },
-]
+  {
+    type: "text",
+    label: "SEO Keywords",
+    name: "keywords",
+    required: true,
+    colWidth: 12,
+  },
+  {
+    type: "text",
+    label: "Preview",
+    name: "preview",
+    required: true,
+    colWidth: 12,
+  },
+];
+
+export const VARIENT_SIZES = [
+  {
+    name: "colorCode",
+    type: "select",
+    required: true,
+    options: [
+      {
+        label: "European",
+        value: "european",
+      },
+    ],
+    label: "Size Type",
+    colWidth: 6,
+  },
+];

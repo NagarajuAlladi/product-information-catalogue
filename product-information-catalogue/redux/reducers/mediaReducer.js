@@ -109,9 +109,7 @@ const mediaReducer = (state = initialState, action) => {
     case types.RESET_MEDIA_INFO:
       return [];
     default:
-      return {
-        ...state,
-      };
+      return state
   }
 };
 

@@ -103,14 +103,37 @@ export default function StylesTable() {
   const theme = useTheme();
   const router = useRouter();
   return (
-    <Box sx={{ mt: "1rem" }}>
+    <Box>
       <Box
         sx={{
           width: "100%",
           overflow: "hidden",
         }}
       >
+        {/* <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+          <Box
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "flex-start",
+            }}
+          >
+            <Checkbox />
+            Showing 16 products
+          </Box>
+          <Box
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "flex-end",
+            }}
+          >
+            <SettingsIcon />
+            Sort by Newest Update
+          </Box>
+        </Box> */}
         <TableContainer
+
           sx={{
             boxShadow:
               "rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px",
@@ -118,9 +141,9 @@ export default function StylesTable() {
           component={Paper}
         >
           <Table size="small">
-            <TableHead sx={{backgroundColor:'rgb(242, 245, 252)'}}>
+            <TableHead sx={{bgcolor: "gray.main",padding: "0.75rem 1rem",}}>
               <TableRow>
-                <TableCell>
+                <TableCell >
                   <Box
                     sx={{
                       display: "flex",
@@ -128,7 +151,7 @@ export default function StylesTable() {
                       justifyContent: "flex-start",
                     }}
                   >
-                    <Checkbox />
+                    <Checkbox size='small'/>
                     Showing 16 products
                   </Box>
                 </TableCell>
@@ -149,7 +172,7 @@ export default function StylesTable() {
                 </TableCell>
               </TableRow>
             </TableHead>
-            <TableBody>
+            <TableBody sx={{ cursor: "pointer"}}>
               {rows.map((row) => (
                 <TableRow
                   key={row.name}
@@ -186,7 +209,7 @@ export default function StylesTable() {
                       </Box>
                     </Box>
                   </TableCell>
-                  <TableCell>Code:{row.code}</TableCell>
+                  <TableCell align="left">Code:{row.code}</TableCell>
                   <TableCell align="left">Hierarchy:{row.hierarchy}</TableCell>
                   <TableCell align="left">{row.complete}% Complete</TableCell>
                   <TableCell align="right">
