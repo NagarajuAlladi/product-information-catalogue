@@ -43,7 +43,7 @@ function OverviewTab() {
             sx={{
               color: "primary.dark",
               paddingY: ".75rem",
-              mr: "1rem",
+              mr: "2.5rem",
               fontWeight: currentNavigation === " Overview" ? "bold" : null,
               // paddingX: "2rem",
               ":hover": {
@@ -51,7 +51,7 @@ function OverviewTab() {
               },
               cursor: "pointer",
               borderBottom:
-                currentNavigation === " Overview" ? "2px solid " : null,
+                currentNavigation === " Overview" ? "2px solid hsla(161, 100%, 37%, 1)" : null,
             }}
           >
             Overview
@@ -73,7 +73,7 @@ function OverviewTab() {
                 fontWeight: "bold",
               },
               cursor: "pointer",
-              borderBottom: currentNavigation === "Common information" ? "2px solid" : null,
+              borderBottom: currentNavigation === "Common information" ? "2px solid hsla(161, 100%, 37%, 1)" : null,
             }}
           >
             Common information
@@ -95,7 +95,7 @@ function OverviewTab() {
               },
               cursor: "pointer",
               borderBottom:
-                currentNavigation === "Varients" ? "2px solid" : null,
+                currentNavigation === "Varients" ? "2px solid hsla(161, 100%, 37%, 1)" : null,
             }}
           >
             Varients
@@ -117,7 +117,7 @@ function OverviewTab() {
               },
               cursor: "pointer",
               borderBottom:
-                currentNavigation === "Associations" ? "2px solid" : null,
+                currentNavigation === "Associations" ? "2px solid hsla(161, 100%, 37%, 1)" : null,
             }}
           >
             Associations
@@ -139,7 +139,7 @@ function OverviewTab() {
               },
               cursor: "pointer",
               borderBottom:
-                currentNavigation === " Internal info" ? "2px solid" : null,
+                currentNavigation === " Internal info" ? "2px solid hsla(161, 100%, 37%, 1)" : null,
             }}
           >
            Internal info
@@ -161,7 +161,7 @@ function OverviewTab() {
               },
               cursor: "pointer",
               borderBottom:
-                currentNavigation === "Activity" ? "2px solid" : null,
+                currentNavigation === "Activity" ? "2px solid hsla(161, 100%, 37%, 1)" : null,
             }}
           >
            Activity

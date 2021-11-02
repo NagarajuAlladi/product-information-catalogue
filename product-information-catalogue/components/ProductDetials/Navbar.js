@@ -10,7 +10,7 @@ import FileUploadOutlinedIcon from "@mui/icons-material/FileUploadOutlined";
 import FileDownloadOutlinedIcon from "@mui/icons-material/FileDownloadOutlined";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowDropDownTwoToneIcon from "@mui/icons-material/ArrowDropDownTwoTone";
-import CheckIcon from '@mui/icons-material/Check';
+import CheckIcon from "@mui/icons-material/Check";
 import { useRouter } from "next/router";
 
 function Navbar() {
@@ -28,22 +28,30 @@ function Navbar() {
           ml: "5.5rem",
         }}
       >
-        <Box  sx={{ display: "flex", alignItems: "center" }}>
-          <ArrowBackIcon onClick={() => router.push("/")}/>
+        <Box sx={{ display: "flex", alignItems: "center" }}>
+          <ArrowBackIcon onClick={() => router.push("/")} />
           <Typography variant="h5">
             <b>Cara RN Sweat</b>
           </Typography>
-          <Button 
-            startIcon={<CheckIcon />}
+          <Button
+            startIcon={<CheckIcon sx={{ mr: -2 }} />}
             variant="contained"
             size="small"
-            sx={{ width: "auto", ml: "2rem" }}
+            sx={{
+              width: "auto",
+              ml: "2rem",
+              backgroundColor: theme.palette.secondary.light,
+              borderRadius: "2rem",
+              color: theme.palette.secondary.main,
+              ":hover": {
+                backgroundColor: "secondary.main",
+              },
+            }}
           >
-            Published
+            <b>Published</b>
           </Button>
         </Box>
-        <Box>
-        </Box>
+        <Box></Box>
         <Box sx={{ display: "flex", alignItems: "center" }}>
           <Box
             sx={{
@@ -51,17 +59,25 @@ function Navbar() {
               width: "auto",
               height: "auto",
               display: "flex",
-              p:'0.1rem 0.5rem',
+              p: "0.1rem 0 0.1rem 0.5rem",
               alignItems: "center",
             }}
           >
-            <Typography variant='' >More actions</Typography>
+            <Typography variant="subtitle2">More actions</Typography>
             <ArrowDropDownTwoToneIcon />
           </Box>
           <Button
             variant="contained"
             size="small"
-            sx={{ width: "auto", ml: "2rem" }}
+            sx={{
+              width: "auto",
+              ml: "2rem",
+              backgroundColor: theme.palette.secondary.main,
+              ":hover": {
+                backgroundColor: "secondary.main",
+                color:'white'
+            },
+            }}
           >
             save
           </Button>

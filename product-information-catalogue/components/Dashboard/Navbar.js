@@ -34,7 +34,11 @@ function Navbar() {
             sx={{
               ml: 4,
               color: "black",
-              backgroundColor:'white'
+              backgroundColor:'white',
+              ":hover": {
+                backgroundColor: "secondary.main",
+                color:'white'
+            },
             }}
           >
            Import <FileUploadOutlinedIcon/>
@@ -45,7 +49,11 @@ function Navbar() {
             sx={{
               ml: 4,
               color: "black",
-              backgroundColor:'white'
+              backgroundColor:'white',
+              ":hover": {
+                backgroundColor: "secondary.main",
+                color:'white'
+            },
             }}
           >
            Export<FileDownloadOutlinedIcon/>

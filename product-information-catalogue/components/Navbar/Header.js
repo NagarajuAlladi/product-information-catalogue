@@ -69,7 +69,7 @@ function Header() {
       <Grid item>
         <Search>
           <SearchIconWrapper>
-            <SearchIcon sx={{ color: "green" }} fontSize="small" />
+            <SearchIcon sx={{ color: theme.palette.secondary.main }} fontSize="small" />
           </SearchIconWrapper>
           <StyledInputBase
             placeholder="search"

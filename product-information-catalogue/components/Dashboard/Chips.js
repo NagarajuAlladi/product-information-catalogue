@@ -2,6 +2,9 @@ import * as React from "react";
 import { styled } from "@mui/material/styles";
 import Chip from "@mui/material/Chip";
 import Box from "@mui/material/Box";
+import { useTheme } from "@mui/material/styles";
+import { IconButton } from "@mui/material";
+import CancelIcon from '@mui/icons-material/Cancel';
 
 const ListItem = styled("li")(({ theme }) => ({
   margin: theme.spacing(0.5),
@@ -20,6 +23,7 @@ export default function ChipsArray() {
     );
   };
 
+  const theme = useTheme();
   return (
     <Box
       sx={{
@@ -28,7 +32,7 @@ export default function ChipsArray() {
         flexWrap: "wrap",
         listStyle: "none",
         p: 0.5,
-        mt:'1rem'
+        mt: "1rem",
       }}
       component="ul"
     >
@@ -38,6 +42,12 @@ export default function ChipsArray() {
         return (
           <ListItem key={data.key}>
             <Chip
+              color='info'
+              deleteIcon={
+                <IconButton >
+                  <CancelIcon fontSize='small' sx={{color:theme.palette.error.main,m:-2}} />
+                </IconButton>
+              }
               icon={icon}
               label={data.label}
               onDelete={handleDelete(data)}

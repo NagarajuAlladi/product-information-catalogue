@@ -42,7 +42,7 @@ function Products() {
             sx={{
               color: "primary.dark",
               paddingY: ".75rem",
-              mr: "1rem",
+              mr: "2rem",
               fontWeight: currentNavigation === "All Products" ? "bold" : null,
               // paddingX: "2rem",
               ":hover": {
@@ -50,7 +50,7 @@ function Products() {
               },
               cursor: "pointer",
               borderBottom:
-                currentNavigation === "All Products" ? "2px solid " : null,
+                currentNavigation === "All Products" ? "2px solid hsla(161, 100%, 37%, 1)" : null,
             }}
           >
             All Products
@@ -65,14 +65,14 @@ function Products() {
             sx={{
               color: "primary.dark",
               paddingY: ".75rem",
-              mr: "1rem",
+              mr: "2rem",
               fontWeight: currentNavigation === "Draft" ? "bold" : null,
               paddingX: "2rem",
               ":hover": {
                 fontWeight: "bold",
               },
               cursor: "pointer",
-              borderBottom: currentNavigation === "Draft" ? "2px solid" : null,
+              borderBottom: currentNavigation === "Draft" ? "2px solid hsla(161, 100%, 37%, 1)" : null,
             }}
           >
             Draft
@@ -86,7 +86,7 @@ function Products() {
             sx={{
               color: "primary.dark",
               paddingY: ".75rem",
-              mr: "1rem",
+              mr: "2rem",
               fontWeight: currentNavigation === "Coming Soon" ? "bold" : null,
               paddingX: "2rem",
               ":hover": {
@@ -94,7 +94,7 @@ function Products() {
               },
               cursor: "pointer",
               borderBottom:
-                currentNavigation === "Coming Soon" ? "2px solid" : null,
+                currentNavigation === "Coming Soon" ? "2px solid hsla(161, 100%, 37%, 1)" : null,
             }}
           >
             Coming Soon
@@ -108,7 +108,7 @@ function Products() {
             sx={{
               color: "primary.dark",
               paddingY: ".75rem",
-              mr: "1rem",
+              mr: "2rem",
               fontWeight: currentNavigation === "Published" ? "bold" : null,
               paddingX: "2rem",
               ":hover": {
@@ -116,7 +116,7 @@ function Products() {
               },
               cursor: "pointer",
               borderBottom:
-                currentNavigation === "Published" ? "2px solid" : null,
+                currentNavigation === "Published" ? "2px solid hsla(161, 100%, 37%, 1)" : null,
             }}
           >
             Published
@@ -130,7 +130,7 @@ function Products() {
             sx={{
               color: "primary.dark",
               paddingY: ".75rem",
-              mr: "1rem",
+              mr: "2rem",
               fontWeight: currentNavigation === "On hold" ? "bold" : null,
               paddingX: "2rem",
               ":hover": {
@@ -138,7 +138,7 @@ function Products() {
               },
               cursor: "pointer",
               borderBottom:
-                currentNavigation === "On hold" ? "2px solid" : null,
+                currentNavigation === "On hold" ? "2px solid hsla(161, 100%, 37%, 1)" : null,
             }}
           >
             On hold
@@ -152,7 +152,7 @@ function Products() {
             sx={{
               color: "primary.dark",
               paddingY: ".75rem",
-              mr: "1rem",
+              mr: "2rem",
               fontWeight: currentNavigation === " Archived" ? "bold" : null,
               paddingX: "2rem",
               ":hover": {
@@ -160,7 +160,7 @@ function Products() {
               },
               cursor: "pointer",
               borderBottom:
-                currentNavigation === " Archived" ? "2px solid" : null,
+                currentNavigation === " Archived" ? "2px solid hsla(161, 100%, 37%, 1)" : null,
             }}
           >
             Archived

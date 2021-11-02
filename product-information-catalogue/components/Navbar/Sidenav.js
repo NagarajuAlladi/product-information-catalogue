@@ -26,7 +26,7 @@ function Sidenav() {
     <>
       <div
         style={{
-          backgroundColor: theme.palette.secondary.main,
+          backgroundColor: theme.palette.primary.main,
           height: "100%",
           width: "auto",
           position: "fixed",
@@ -41,12 +41,10 @@ function Sidenav() {
           <ListItem>
             <HomeIcon
               sx={{
-                color: "white",
-                // color: router.pathname === ("/" && 'primary.light'),
+                // color: "white",
+                color:
+                  router.pathname === "/home" ? "secondary.main" : "white",
                 mt: "1rem",
-                ":hover": {
-                  bgcolor: "rgba(0, 0, 0, 0.15)",
-                },
                 cursor: "pointer",
               }}
               onClick={() => router.push("/home")}
@@ -55,12 +53,10 @@ function Sidenav() {
           <ListItem>
             <LabelOffIcon
               sx={{
-                color: "white",
-                // color: router.pathname === "/products" && 'primary.light',
+                // color: "white",
+                color:
+                  router.pathname === (("/products"&&"/overview")&&("/products"))? "secondary.main" : "white",
                 mt: "1rem",
-                ":hover": {
-                  bgcolor: "rgba(0, 0, 0, 0.15)",
-                },
                 cursor: "pointer",
               }}
               onClick={() => router.push("/products")}
@@ -69,8 +65,11 @@ function Sidenav() {
           <ListItem>
             <ImageIcon
               sx={{
-                color: "white",
-                // color: router.pathname === "/digitalAssetManagement" && 'primary.light',
+                // color: "white",
+                color:
+                  router.pathname === "/digitalAssetManagement"
+                    ? "secondary.main"
+                    : "white",
                 mt: "1rem",
                 ":hover": {
                   bgcolor: "rgba(0, 0, 0, 0.15)",
@@ -85,9 +84,6 @@ function Sidenav() {
               sx={{
                 color: "white",
                 mt: "1rem",
-                ":hover": {
-                  bgcolor: "rgba(0, 0, 0, 0.15)",
-                },
                 cursor: "pointer",
               }}
             />
@@ -97,9 +93,6 @@ function Sidenav() {
               sx={{
                 color: "white",
                 mt: "1rem",
-                ":hover": {
-                  bgcolor: "rgba(0, 0, 0, 0.15)",
-                },
                 cursor: "pointer",
               }}
             />
@@ -109,9 +102,6 @@ function Sidenav() {
               sx={{
                 color: "white",
                 mt: "1rem",
-                ":hover": {
-                  bgcolor: "rgba(0, 0, 0, 0.15)",
-                },
                 cursor: "pointer",
               }}
             />

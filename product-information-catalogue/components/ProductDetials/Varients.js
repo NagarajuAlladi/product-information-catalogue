@@ -123,9 +123,7 @@ function Varients() {
                 onChange={handleChangeCountry}
                 sx={{ width: "13rem", height: "3rem", mr: "0.5rem" }}
               >
-                <MenuItem  value="">
-                  Norge/NOK
-                </MenuItem>
+                <MenuItem value="">Norge/NOK</MenuItem>
                 <MenuItem value={10}>Filter</MenuItem>
                 <MenuItem value={20}>Filter</MenuItem>
                 <MenuItem value={30}>Filter</MenuItem>
@@ -177,7 +175,15 @@ function Varients() {
           <Button
             variant="contained"
             size="small"
-            sx={{ width: "auto", ml: "2rem" }}
+            sx={{
+              width: "auto",
+              backgroundColor:theme.palette.secondary.main,
+              ml: "2rem",
+              ":hover": {
+                backgroundColor: "secondary.main",
+                color: "white",
+              },
+            }}
           >
             Preview
           </Button>

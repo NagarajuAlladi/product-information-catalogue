@@ -133,7 +133,6 @@ export default function StylesTable() {
           </Box>
         </Box> */}
         <TableContainer
-
           sx={{
             boxShadow:
               "rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px",
@@ -141,9 +140,9 @@ export default function StylesTable() {
           component={Paper}
         >
           <Table size="small">
-            <TableHead sx={{bgcolor: "gray.main",padding: "0.75rem 1rem",}}>
+            <TableHead sx={{ bgcolor: "gray.main", padding: "0.75rem 1rem" }}>
               <TableRow>
-                <TableCell >
+                <TableCell>
                   <Box
                     sx={{
                       display: "flex",
@@ -151,7 +150,7 @@ export default function StylesTable() {
                       justifyContent: "flex-start",
                     }}
                   >
-                    <Checkbox size='small'/>
+                    <Checkbox size="small" sx={{ ml: -6.5 }} color='secondary'/>
                     Showing 16 products
                   </Box>
                 </TableCell>
@@ -164,15 +163,16 @@ export default function StylesTable() {
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "flex-end",
+                      mr: -3,
                     }}
                   >
-                    <SettingsIcon />
+                    <SettingsIcon fontSize='small' sx={{ color: "hsla(161, 100%, 37%, 1)" }} />
                     Sort by Newest Update
                   </Box>
                 </TableCell>
               </TableRow>
             </TableHead>
-            <TableBody sx={{ cursor: "pointer"}}>
+            <TableBody sx={{ cursor: "pointer" }}>
               {rows.map((row) => (
                 <TableRow
                   key={row.name}
@@ -180,7 +180,7 @@ export default function StylesTable() {
                 >
                   <TableCell component="th" scope="row">
                     <Box sx={{ display: "flex", alignItems: "center" }}>
-                      <Checkbox size="small" />
+                      <Checkbox size="small" sx={{ ml: -6.5 }} color='secondary'/>
 
                       <Avatar
                         sx={{ width: "2rem", height: "2rem" }}
@@ -216,9 +216,24 @@ export default function StylesTable() {
                     <Button
                       variant="contained"
                       size="small"
-                      sx={{ borderRadius: "30px", width: "6rem" }}
+                      sx={{
+                        borderRadius: "30px",
+                        width: "6rem",
+                        mr: -3,
+                        backgroundColor: theme.palette.secondary.light,
+                        ":hover": {
+                          backgroundColor: "secondary.main",
+                      },
+                      }}
                     >
-                      <Typography variant="caption">{row.published}</Typography>
+                      <Typography
+                        sx={{ color: theme.palette.secondary.main,":hover": {
+                          color:'white'
+                      },}}
+                        variant="caption"
+                      >
+                        <b>{row.published}</b>
+                      </Typography>
                     </Button>
                   </TableCell>
                 </TableRow>

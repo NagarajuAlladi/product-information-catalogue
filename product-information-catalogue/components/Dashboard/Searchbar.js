@@ -52,15 +52,16 @@ function Searchbar() {
   };
   const theme = useTheme();
   return (
-    <Box sx={{ mt: "1rem" }}>
-      <Box sx={{ display: "flex", alignItems: "center" }}>
+    <Box sx={{ mt: "1rem", }}>
+      <Box sx={{ display: "flex", alignItems: "center", }}>
         <Select
           labelId="demo-simple-select-label"
           id="demo-simple-select"
           value={age}
+          sx={{borderRadius:'0px'}}
           displayEmpty
           onChange={handleChange}
-          sx={{ width: "15rem",height:'3rem'}}
+          sx={{ width: "15rem", height: "3rem",}}
         >
           <MenuItem disabled value="">
             Filter
@@ -69,16 +70,9 @@ function Searchbar() {
           <MenuItem value={20}>Filter</MenuItem>
           <MenuItem value={30}>Filter</MenuItem>
         </Select>
-        <Box sx={{ width: "100%" }}>
-          <Search>
-            <SearchIconWrapper>
-              <SearchIcon sx={{ color: "green" }} fontSize="small" />
-            </SearchIconWrapper>
-            <StyledInputBase
-              placeholder="Search products..."
-              inputProps={{ "aria-label": "search" }}
-            />
-          </Search>
+        <Box sx={{ border: "1px solid gray", width: "100%", height: "3rem",display:'flex',alignItems:'center'}}>
+          <SearchIcon  fontSize="small" sx={{color:theme.palette.secondary.main,m:'0 0.5rem'}}/>
+          <InputBase  placeholder='Search products...'/>
         </Box>
         <Box>
           <MoreVertIcon />
@@ -89,3 +83,17 @@ function Searchbar() {
 }
 
 export default Searchbar;
+
+{
+  /* <Box sx={{ width: "100%" }}>
+  <Search>
+    <SearchIconWrapper>
+      <SearchIcon sx={{ color: "green" }} fontSize="small" />
+    </SearchIconWrapper>
+    <StyledInputBase
+      placeholder="Search products..."
+      inputProps={{ "aria-label": "search" }}
+    />
+  </Search>
+</Box>; */
+}

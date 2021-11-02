@@ -8,7 +8,7 @@ function Sortby() {
     <div>
       <Box sx={{ display: "flex", justifyContent: "space-between" }}>
         <Box>
-          <Checkbox />
+          <Checkbox size='small' sx={{ml:-2.5}}/>
           Showing 2332 assets
         </Box>
         <Box
@@ -19,7 +19,7 @@ function Sortby() {
             mr:'0.8rem'
           }}
         >
-          <SettingsIcon />
+          <SettingsIcon fontSize='small' sx={{ color: "hsla(161, 100%, 37%, 1)" }}/>
           Sort by Newest Update
         </Box>
       </Box>

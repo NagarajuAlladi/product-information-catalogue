@@ -49,7 +49,7 @@ function StylesTab() {
               },
               cursor: "pointer",
               borderBottom:
-                currentNavigation === " Styles" ? "2px solid " : null,
+                currentNavigation === " Styles" ? "2px solid hsla(161, 100%, 37%, 1)" : null,
             }}
           >
             Styles
@@ -73,7 +73,7 @@ function StylesTab() {
               },
               cursor: "pointer",
               borderBottom:
-                currentNavigation === "Varient" ? "2px solid" : null,
+                currentNavigation === "Varient" ? "2px solid hsla(161, 100%, 37%, 1)" : null,
             }}
           >
             Varient

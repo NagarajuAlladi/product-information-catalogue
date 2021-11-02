@@ -43,7 +43,7 @@ function AllMediaTab() {
             sx={{
               color: "primary.dark",
               paddingY: ".75rem",
-              mr: "1rem",
+              mr: "2rem",
               fontWeight: currentNavigation === "All media" ? "bold" : null,
               // paddingX: "2rem",
               ":hover": {
@@ -51,7 +51,7 @@ function AllMediaTab() {
               },
               cursor: "pointer",
               borderBottom:
-                currentNavigation === "All media" ? "2px solid " : null,
+                currentNavigation === "All media" ? "2px solid hsla(161, 100%, 37%, 1)" : null,
             }}
           >
            All media
@@ -73,7 +73,7 @@ function AllMediaTab() {
                 fontWeight: "bold",
               },
               cursor: "pointer",
-              borderBottom: currentNavigation === "Images" ? "2px solid" : null,
+              borderBottom: currentNavigation === "Images" ? "2px solid hsla(161, 100%, 37%, 1)" : null,
             }}
           >
            Images
@@ -95,7 +95,7 @@ function AllMediaTab() {
               },
               cursor: "pointer",
               borderBottom:
-                currentNavigation === "Videos" ? "2px solid" : null,
+                currentNavigation === "Videos" ? "2px solid hsla(161, 100%, 37%, 1)" : null,
             }}
           >
             Videos
