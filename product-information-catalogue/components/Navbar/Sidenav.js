@@ -1,5 +1,9 @@
 //react
 import { useState } from "react";
+
+//next
+import { useRouter } from "next/router";
+
 // Material UI
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
@@ -10,13 +14,6 @@ import ArrowCircleUpIcon from "@mui/icons-material/ArrowCircleUp";
 import GridViewIcon from "@mui/icons-material/GridView";
 import EqualizerIcon from "@mui/icons-material/Equalizer";
 import { useTheme } from "@mui/material/styles";
-import Navbar from "../Dashboard/Navbar";
-import Products from "../Dashboard/Products";
-import DigitalAssetManagementNavbar from "../DigitalAssetManagement/DigitalAssetManagementNavbar";
-import DigitalAssetManagementSearchbar from "../DigitalAssetManagement/DigitalAssetManagementSearchbar";
-import AllProductsTab from "../DigitalAssetManagement/AllMediaTab";
-import AllMediaTab from "../DigitalAssetManagement/AllMediaTab";
-import { useRouter } from "next/router";
 
 function Sidenav() {
   const theme = useTheme();
@@ -42,8 +39,7 @@ function Sidenav() {
             <HomeIcon
               sx={{
                 // color: "white",
-                color:
-                  router.pathname === "/home" ? "secondary.main" : "white",
+                color: router.pathname === "/home" ? "secondary.main" : "white",
                 mt: "1rem",
                 cursor: "pointer",
               }}
@@ -55,7 +51,10 @@ function Sidenav() {
               sx={{
                 // color: "white",
                 color:
-                  router.pathname === (("/products"&&"/overview")&&("/products"))? "secondary.main" : "white",
+                  router.pathname ===
+                  ("/products" && "/overview" && "/products")
+                    ? "secondary.main"
+                    : "white",
                 mt: "1rem",
                 cursor: "pointer",
               }}
@@ -108,38 +107,6 @@ function Sidenav() {
           </ListItem>
         </List>
       </div>
-      {/* {currentNavigation === "Home" ? (
-        <>
-          <h1 style={{ marginLeft: "5rem" }}>HomeIcon</h1>
-        </>
-      ) : null}
-      {currentNavigation === "Label" ? (
-        <>
-          <Navbar />
-          <Products />
-        </>
-      ) : null}
-      {currentNavigation === "Image" ? (
-        <>
-          <DigitalAssetManagementNavbar />
-          <AllMediaTab />
-        </>
-      ) : null}
-      {currentNavigation === "Arrow" ? (
-        <>
-          <h1 style={{ marginLeft: "5rem" }}>Arrow</h1>
-        </>
-      ) : null}
-      {currentNavigation === "View" ? (
-        <>
-          <h1 style={{ marginLeft: "5rem" }}>View</h1>
-        </>
-      ) : null}
-      {currentNavigation === "Equilizer" ? (
-        <>
-          <h1 style={{ marginLeft: "5rem" }}>Equilizer</h1>
-        </>
-      ) : null} */}
     </>
   );
 }

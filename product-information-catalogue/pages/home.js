@@ -4,7 +4,7 @@ import React from 'react'
 function home() {
   return (
     <div>
-      <Typography variant='h3' sx={{marginLeft:'6rem'}}>
+      <Typography variant='h4' sx={{marginLeft:'6rem'}}>
         Home
       </Typography>
     </div>

@@ -51,10 +51,12 @@ function AllMediaTab() {
               },
               cursor: "pointer",
               borderBottom:
-                currentNavigation === "All media" ? "2px solid hsla(161, 100%, 37%, 1)" : null,
+                currentNavigation === "All media"
+                  ? "2px solid hsla(161, 100%, 37%, 1)"
+                  : null,
             }}
           >
-           All media
+            All media
           </Typography>
         </Box>
 
@@ -73,10 +75,13 @@ function AllMediaTab() {
                 fontWeight: "bold",
               },
               cursor: "pointer",
-              borderBottom: currentNavigation === "Images" ? "2px solid hsla(161, 100%, 37%, 1)" : null,
+              borderBottom:
+                currentNavigation === "Images"
+                  ? "2px solid hsla(161, 100%, 37%, 1)"
+                  : null,
             }}
           >
-           Images
+            Images
           </Typography>
         </Box>
         <Box>
@@ -95,29 +100,29 @@ function AllMediaTab() {
               },
               cursor: "pointer",
               borderBottom:
-                currentNavigation === "Videos" ? "2px solid hsla(161, 100%, 37%, 1)" : null,
+                currentNavigation === "Videos"
+                  ? "2px solid hsla(161, 100%, 37%, 1)"
+                  : null,
             }}
           >
             Videos
           </Typography>
-        
-      </Box>
+        </Box>
       </Box>
       <Divider />
 
       {currentNavigation === "All media" ? (
         <>
-          <DigitalAssetManagementSearchbar/>
-          <Sortby/>
+          <DigitalAssetManagementSearchbar />
+          <Sortby />
           {/* <ProductsList/> */}
-          <Divider sx={{mb:'1rem'}}/>
-          <AllProductDetials/>
+          <Divider sx={{ mb: "1rem" }} />
+          <AllProductDetials />
         </>
       ) : null}
 
       {currentNavigation === "Images" ? <>Images</> : null}
       {currentNavigation === "Videos" ? <>Videos</> : null}
-      
     </Box>
   );
 }

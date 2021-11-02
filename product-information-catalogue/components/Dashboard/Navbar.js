@@ -6,8 +6,8 @@ import { useState } from "react";
 import { Button, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import { useTheme } from "@mui/material/styles";
-import FileUploadOutlinedIcon from '@mui/icons-material/FileUploadOutlined';
-import FileDownloadOutlinedIcon from '@mui/icons-material/FileDownloadOutlined';
+import FileUploadOutlinedIcon from "@mui/icons-material/FileUploadOutlined";
+import FileDownloadOutlinedIcon from "@mui/icons-material/FileDownloadOutlined";
 
 function Navbar() {
   const theme = useTheme();
@@ -19,29 +19,28 @@ function Navbar() {
           justifyContent: "space-between",
           alignItems: "center",
           mt: 8,
-          mr:"1.5rem",
-          ml:"5.5rem"
+          mr: "1.5rem",
+          ml: "5.5rem",
         }}
       >
-        <Typography variant="h5" >
+        <Typography variant="h5">
           <b>Products</b>
         </Typography>
         <div>
           <Button
             variant="contained"
             size="small"
-            
             sx={{
               ml: 4,
               color: "black",
-              backgroundColor:'white',
+              backgroundColor: "white",
               ":hover": {
                 backgroundColor: "secondary.main",
-                color:'white'
-            },
+                color: "white",
+              },
             }}
           >
-           Import <FileUploadOutlinedIcon/>
+            Import <FileUploadOutlinedIcon />
           </Button>
           <Button
             variant="contained"
@@ -49,14 +48,15 @@ function Navbar() {
             sx={{
               ml: 4,
               color: "black",
-              backgroundColor:'white',
+              backgroundColor: "white",
               ":hover": {
                 backgroundColor: "secondary.main",
-                color:'white'
-            },
+                color: "white",
+              },
             }}
           >
-           Export<FileDownloadOutlinedIcon/>
+            Export
+            <FileDownloadOutlinedIcon />
           </Button>
         </div>
       </Box>

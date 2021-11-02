@@ -34,7 +34,7 @@ function StylesTab() {
       >
         <Box>
           <Typography
-          variant='body2'
+            variant="body2"
             onClick={() => {
               setCurrentNavigation(" Styles");
             }}
@@ -49,7 +49,9 @@ function StylesTab() {
               },
               cursor: "pointer",
               borderBottom:
-                currentNavigation === " Styles" ? "2px solid hsla(161, 100%, 37%, 1)" : null,
+                currentNavigation === " Styles"
+                  ? "2px solid hsla(161, 100%, 37%, 1)"
+                  : null,
             }}
           >
             Styles
@@ -58,7 +60,7 @@ function StylesTab() {
 
         <Box>
           <Typography
-          variant='body2'
+            variant="body2"
             onClick={() => {
               setCurrentNavigation("Varient");
             }}
@@ -73,7 +75,9 @@ function StylesTab() {
               },
               cursor: "pointer",
               borderBottom:
-                currentNavigation === "Varient" ? "2px solid hsla(161, 100%, 37%, 1)" : null,
+                currentNavigation === "Varient"
+                  ? "2px solid hsla(161, 100%, 37%, 1)"
+                  : null,
             }}
           >
             Varient

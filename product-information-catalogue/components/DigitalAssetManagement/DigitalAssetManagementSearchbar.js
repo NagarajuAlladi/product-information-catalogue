@@ -84,17 +84,6 @@ function DigitalAssetManagementSearchbar() {
           />
           <InputBase placeholder="Search products..." />
         </Box>
-        {/* <Box sx={{ width: "100%" }}>
-          <Search>
-            <SearchIconWrapper>
-              <SearchIcon sx={{ color: "green" }} fontSize="small" />
-            </SearchIconWrapper>
-            <StyledInputBase
-              placeholder="Search products..."
-              inputProps={{ "aria-label": "search" }}
-            />
-          </Search>
-        </Box> */}
         <Box>
           <MoreVertIcon />
         </Box>

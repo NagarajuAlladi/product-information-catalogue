@@ -1,10 +1,15 @@
+//react
+import { useState, useEffect, useRef } from "react";
+
+//material-ui
 import { Grid, TextField, Typography } from "@mui/material";
 import { Box } from "@mui/system";
-import React from "react";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
+
+//components
 import GenerateForm from "../Forms/GenerateForm";
 import {VARIENT_SIZES} from '../../utils/forms/form-config'
-import { useState, useEffect, useRef } from "react";
+
 
 function VarientSizes() {
   const ref = useRef(null);

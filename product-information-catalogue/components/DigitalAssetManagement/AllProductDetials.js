@@ -1,18 +1,16 @@
 //react
 import React from "react";
 
-//components
-// import Analytics from "./Analytics";
-// import EmployeeCard from "./EmployeeCard";
+//react-redux
+import { useSelector } from "react-redux";
 
 //material Ui
 import { Grid } from "@mui/material";
 import { Box } from "@mui/material";
 
-//styles
-// import styles from "../../styles/css/Onboarding/MediaCard.module.css";
+//components
 import ProductsList from "./ProductsList";
-import { useSelector } from "react-redux";
+
 
 // const mediaCards = [
 //     {
@@ -113,22 +111,26 @@ import { useSelector } from "react-redux";
 // },
 // ];
 
-
-
 function MediaCard() {
   // console.log(mediaCards.title)
-  const media = useSelector(state => state.media);
-  console.log("media Reducer is",media)
+  const media = useSelector((state) => state.media);
+  console.log("media Reducer is", media);
   // console.log("mediacards",mediaCards)
-    return (
-        <div>
-            <Box sx={{display:'grid',gridTemplateColumns:'repeat(auto-fit, minmax(250px, 1fr))',gridGap:'20px'}}>
-            {media.map((mediaCard, i) => {
-                return <ProductsList {...mediaCard} />;
-            })}
-            </Box>
-        </div>
-    );
+  return (
+    <div>
+      <Box
+        sx={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+          gridGap: "20px",
+        }}
+      >
+        {media.map((mediaCard, i) => {
+          return <ProductsList {...mediaCard} />;
+        })}
+      </Box>
+    </div>
+  );
 }
 
 export default MediaCard;

@@ -1,4 +1,8 @@
+
+//react
 import React from 'react'
+
+//commponents
 import Header from '../components/Navbar/Header'
 import Sidenav from '../components/Navbar/Sidenav'
 

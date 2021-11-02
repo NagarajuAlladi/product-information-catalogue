@@ -1,15 +1,18 @@
+
+//material-ui
 import { Grid, Typography } from "@mui/material";
 import { Box } from "@mui/system";
-import React from "react";
-import OverviewTable from "./OverviewTable";
 import { useTheme } from "@mui/material/styles";
+
+//components
+import OverviewTable from "./OverviewTable";
 import Channels from "./Channels";
 
 function Overview() {
   const theme = useTheme();
   return (
     <div>
-      <Grid container sx={{mt:'1.5rem'}}>
+      <Grid container sx={{ mt: "1.5rem" }}>
         <Grid item xs={10}>
           <Box>
             <Typography variant="h6">
@@ -21,7 +24,7 @@ function Overview() {
             <OverviewTable />
           </Box>
           <Box>
-            <Channels/>
+            <Channels />
           </Box>
         </Grid>
         <Grid item xs={2}>
@@ -30,13 +33,12 @@ function Overview() {
               width: "13rem",
               height: "25rem",
               backgroundColor: theme.palette.secondary.main,
-              ml:'2rem'
+              ml: "2rem",
             }}
           >
             Hello
           </Box>
         </Grid>
-        
       </Grid>
     </div>
   );

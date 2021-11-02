@@ -2,6 +2,9 @@
 import React from "react";
 import { useState } from "react";
 
+//next
+import { useRouter } from "next/router";
+
 //material UI
 import { Button, Typography } from "@mui/material";
 import { Box } from "@mui/system";
@@ -11,7 +14,7 @@ import FileDownloadOutlinedIcon from "@mui/icons-material/FileDownloadOutlined";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowDropDownTwoToneIcon from "@mui/icons-material/ArrowDropDownTwoTone";
 import CheckIcon from "@mui/icons-material/Check";
-import { useRouter } from "next/router";
+
 
 function Navbar() {
   const theme = useTheme();
@@ -75,8 +78,8 @@ function Navbar() {
               backgroundColor: theme.palette.secondary.main,
               ":hover": {
                 backgroundColor: "secondary.main",
-                color:'white'
-            },
+                color: "white",
+              },
             }}
           >
             save

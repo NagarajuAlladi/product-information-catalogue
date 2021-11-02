@@ -50,7 +50,9 @@ function Products() {
               },
               cursor: "pointer",
               borderBottom:
-                currentNavigation === "All Products" ? "2px solid hsla(161, 100%, 37%, 1)" : null,
+                currentNavigation === "All Products"
+                  ? "2px solid hsla(161, 100%, 37%, 1)"
+                  : null,
             }}
           >
             All Products
@@ -72,7 +74,10 @@ function Products() {
                 fontWeight: "bold",
               },
               cursor: "pointer",
-              borderBottom: currentNavigation === "Draft" ? "2px solid hsla(161, 100%, 37%, 1)" : null,
+              borderBottom:
+                currentNavigation === "Draft"
+                  ? "2px solid hsla(161, 100%, 37%, 1)"
+                  : null,
             }}
           >
             Draft
@@ -94,7 +99,9 @@ function Products() {
               },
               cursor: "pointer",
               borderBottom:
-                currentNavigation === "Coming Soon" ? "2px solid hsla(161, 100%, 37%, 1)" : null,
+                currentNavigation === "Coming Soon"
+                  ? "2px solid hsla(161, 100%, 37%, 1)"
+                  : null,
             }}
           >
             Coming Soon
@@ -116,7 +123,9 @@ function Products() {
               },
               cursor: "pointer",
               borderBottom:
-                currentNavigation === "Published" ? "2px solid hsla(161, 100%, 37%, 1)" : null,
+                currentNavigation === "Published"
+                  ? "2px solid hsla(161, 100%, 37%, 1)"
+                  : null,
             }}
           >
             Published
@@ -138,7 +147,9 @@ function Products() {
               },
               cursor: "pointer",
               borderBottom:
-                currentNavigation === "On hold" ? "2px solid hsla(161, 100%, 37%, 1)" : null,
+                currentNavigation === "On hold"
+                  ? "2px solid hsla(161, 100%, 37%, 1)"
+                  : null,
             }}
           >
             On hold
@@ -160,7 +171,9 @@ function Products() {
               },
               cursor: "pointer",
               borderBottom:
-                currentNavigation === " Archived" ? "2px solid hsla(161, 100%, 37%, 1)" : null,
+                currentNavigation === " Archived"
+                  ? "2px solid hsla(161, 100%, 37%, 1)"
+                  : null,
             }}
           >
             Archived

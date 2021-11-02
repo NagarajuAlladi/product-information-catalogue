@@ -14,10 +14,11 @@ import {
 } from "@mui/material";
 import { Box, color } from "@mui/system";
 import { useTheme } from "@mui/material/styles";
+
+//components
 import Overview from "./Overview";
 import Channels from "./Channels";
 import Varients from "./Varients";
-
 
 //components
 
@@ -26,7 +27,7 @@ function OverviewTab() {
   const [currentNavigation, setCurrentNavigation] = useState(" Overview");
 
   return (
-    <Box sx={{  mr: "1.5rem", ml: "5.5rem" }}>
+    <Box sx={{ mr: "1.5rem", ml: "5.5rem" }}>
       <Box
         sx={{
           display: "flex",
@@ -51,7 +52,9 @@ function OverviewTab() {
               },
               cursor: "pointer",
               borderBottom:
-                currentNavigation === " Overview" ? "2px solid hsla(161, 100%, 37%, 1)" : null,
+                currentNavigation === " Overview"
+                  ? "2px solid hsla(161, 100%, 37%, 1)"
+                  : null,
             }}
           >
             Overview
@@ -67,13 +70,17 @@ function OverviewTab() {
               color: "primary.dark",
               paddingY: ".75rem",
               mr: "1rem",
-              fontWeight: currentNavigation === "Common information" ? "bold" : null,
+              fontWeight:
+                currentNavigation === "Common information" ? "bold" : null,
               paddingX: "2rem",
               ":hover": {
                 fontWeight: "bold",
               },
               cursor: "pointer",
-              borderBottom: currentNavigation === "Common information" ? "2px solid hsla(161, 100%, 37%, 1)" : null,
+              borderBottom:
+                currentNavigation === "Common information"
+                  ? "2px solid hsla(161, 100%, 37%, 1)"
+                  : null,
             }}
           >
             Common information
@@ -95,7 +102,9 @@ function OverviewTab() {
               },
               cursor: "pointer",
               borderBottom:
-                currentNavigation === "Varients" ? "2px solid hsla(161, 100%, 37%, 1)" : null,
+                currentNavigation === "Varients"
+                  ? "2px solid hsla(161, 100%, 37%, 1)"
+                  : null,
             }}
           >
             Varients
@@ -117,7 +126,9 @@ function OverviewTab() {
               },
               cursor: "pointer",
               borderBottom:
-                currentNavigation === "Associations" ? "2px solid hsla(161, 100%, 37%, 1)" : null,
+                currentNavigation === "Associations"
+                  ? "2px solid hsla(161, 100%, 37%, 1)"
+                  : null,
             }}
           >
             Associations
@@ -132,17 +143,20 @@ function OverviewTab() {
               color: "primary.dark",
               paddingY: ".75rem",
               mr: "1rem",
-              fontWeight: currentNavigation === " Internal info" ? "bold" : null,
+              fontWeight:
+                currentNavigation === " Internal info" ? "bold" : null,
               paddingX: "2rem",
               ":hover": {
                 fontWeight: "bold",
               },
               cursor: "pointer",
               borderBottom:
-                currentNavigation === " Internal info" ? "2px solid hsla(161, 100%, 37%, 1)" : null,
+                currentNavigation === " Internal info"
+                  ? "2px solid hsla(161, 100%, 37%, 1)"
+                  : null,
             }}
           >
-           Internal info
+            Internal info
           </Typography>
         </Box>
         <Box>
@@ -161,10 +175,12 @@ function OverviewTab() {
               },
               cursor: "pointer",
               borderBottom:
-                currentNavigation === "Activity" ? "2px solid hsla(161, 100%, 37%, 1)" : null,
+                currentNavigation === "Activity"
+                  ? "2px solid hsla(161, 100%, 37%, 1)"
+                  : null,
             }}
           >
-           Activity
+            Activity
           </Typography>
         </Box>
       </Box>
@@ -172,12 +188,18 @@ function OverviewTab() {
 
       {currentNavigation === " Overview" ? (
         <>
-          <Overview/>
+          <Overview />
         </>
       ) : null}
 
-      {currentNavigation === "Common information" ? <>Common information</> : null}
-      {currentNavigation === "Varients" ? <><Varients/></> : null}
+      {currentNavigation === "Common information" ? (
+        <>Common information</>
+      ) : null}
+      {currentNavigation === "Varients" ? (
+        <>
+          <Varients />
+        </>
+      ) : null}
       {currentNavigation === "Associations" ? <>Associations</> : null}
       {currentNavigation === " Internal info" ? <> Internal info</> : null}
       {currentNavigation === "Activity" ? <>Activity</> : null}

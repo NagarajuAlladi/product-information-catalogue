@@ -1,17 +1,24 @@
+//react
+import React, { useState } from "react";
+
+//material-ui
 import {
+  Avatar,
   Button,
   Divider,
   Grid,
+  LinearProgress,
   MenuItem,
   Select,
   Typography,
 } from "@mui/material";
 import { Box } from "@mui/system";
-import React, { useState } from "react";
 import ArrowDropDownTwoToneIcon from "@mui/icons-material/ArrowDropDownTwoTone";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import { TreeItem, TreeView } from "@mui/lab";
 import { useTheme } from "@mui/material/styles";
+
+//components
 import GeneralInformation from "./GeneralInformation";
 import ProductPhotos from "./ProductPhotos";
 import VarientAttribute from "./VarientAttribute";
@@ -123,7 +130,17 @@ function Varients() {
                 onChange={handleChangeCountry}
                 sx={{ width: "13rem", height: "3rem", mr: "0.5rem" }}
               >
-                <MenuItem value="">Norge/NOK</MenuItem>
+                <MenuItem value="">
+                  <Box sx={{ display: "flex", alignItems: "center" }}>
+                    <Avatar
+                      sx={{ width: "2rem", height: "1.5rem" }}
+                      alt="Remy Sharp"
+                      src="https://images.unsplash.com/photo-1499188073299-5bd9060e044b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjZ8fGZsYWdzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                      variant="square"
+                    />
+                    &nbsp;Norge/NOK
+                  </Box>
+                </MenuItem>
                 <MenuItem value={10}>Filter</MenuItem>
                 <MenuItem value={20}>Filter</MenuItem>
                 <MenuItem value={30}>Filter</MenuItem>
@@ -139,7 +156,9 @@ function Varients() {
                 onChange={handleChangeComplete}
                 sx={{ width: "13rem", height: "3rem" }}
               >
-                <MenuItem value="">80% complete</MenuItem>
+                <MenuItem value="">80% complete
+                <LinearProgress variant="determinate" color='secondary'/>
+                </MenuItem>
                 <MenuItem value={20}>Filter</MenuItem>
                 <MenuItem value={30}>Filter</MenuItem>
               </Select>
@@ -177,7 +196,7 @@ function Varients() {
             size="small"
             sx={{
               width: "auto",
-              backgroundColor:theme.palette.secondary.main,
+              backgroundColor: theme.palette.secondary.main,
               ml: "2rem",
               ":hover": {
                 backgroundColor: "secondary.main",

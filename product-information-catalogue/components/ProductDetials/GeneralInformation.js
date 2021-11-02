@@ -1,12 +1,17 @@
+
+//react
+import { useState, useEffect, useRef } from "react";
+
+//material-ui
 import { Button, Grid, TextField, Typography } from "@mui/material";
 import { Box } from "@mui/system";
-import React from "react";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
-import { useState, useEffect, useRef } from "react";
 import { useTheme } from "@mui/material/styles";
+
+
+//components
 import { GENERAL_INFORMATION } from "../../utils/forms/form-config";
 import GenerateForm from "../Forms/GenerateForm";
-
 
 function GeneralInformation() {
   const ref = useRef(null);

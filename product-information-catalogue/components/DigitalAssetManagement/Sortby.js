@@ -1,6 +1,11 @@
+
+//react
+import React from "react";
+
+
+//material-ui
 import { Checkbox } from "@mui/material";
 import { Box } from "@mui/system";
-import React from "react";
 import SettingsIcon from "@mui/icons-material/Settings";
 
 function Sortby() {

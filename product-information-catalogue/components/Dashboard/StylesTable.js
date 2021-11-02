@@ -12,23 +12,10 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import Avatar from "@mui/material/Avatar";
-import Grid from "@mui/material/Grid";
-import TablePagination from "@mui/material/TablePagination";
-import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
-import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-import PropTypes from "prop-types";
-import Rating from "@mui/material/Rating";
-import LooksOneIcon from "@mui/icons-material/LooksOne";
-import LooksTwoIcon from "@mui/icons-material/LooksTwo";
-import Looks3Icon from "@mui/icons-material/Looks3";
-import Looks4Icon from "@mui/icons-material/Looks4";
-import Looks5Icon from "@mui/icons-material/Looks5";
-import Looks6Icon from "@mui/icons-material/Looks6";
 import { useTheme } from "@mui/material/styles";
 import { Box } from "@mui/system";
 import { Button, Checkbox, Typography } from "@mui/material";
 import SettingsIcon from "@mui/icons-material/Settings";
-import { Router } from "next/dist/client/router";
 
 function createData(
   name,
@@ -110,28 +97,6 @@ export default function StylesTable() {
           overflow: "hidden",
         }}
       >
-        {/* <Box sx={{ display: "flex", justifyContent: "space-between" }}>
-          <Box
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "flex-start",
-            }}
-          >
-            <Checkbox />
-            Showing 16 products
-          </Box>
-          <Box
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "flex-end",
-            }}
-          >
-            <SettingsIcon />
-            Sort by Newest Update
-          </Box>
-        </Box> */}
         <TableContainer
           sx={{
             boxShadow:
@@ -150,7 +115,11 @@ export default function StylesTable() {
                       justifyContent: "flex-start",
                     }}
                   >
-                    <Checkbox size="small" sx={{ ml: -6.5 }} color='secondary'/>
+                    <Checkbox
+                      size="small"
+                      sx={{ ml: -6.5 }}
+                      color="secondary"
+                    />
                     Showing 16 products
                   </Box>
                 </TableCell>
@@ -166,7 +135,10 @@ export default function StylesTable() {
                       mr: -3,
                     }}
                   >
-                    <SettingsIcon fontSize='small' sx={{ color: "hsla(161, 100%, 37%, 1)" }} />
+                    <SettingsIcon
+                      fontSize="small"
+                      sx={{ color: "hsla(161, 100%, 37%, 1)" }}
+                    />
                     Sort by Newest Update
                   </Box>
                 </TableCell>
@@ -180,15 +152,18 @@ export default function StylesTable() {
                 >
                   <TableCell component="th" scope="row">
                     <Box sx={{ display: "flex", alignItems: "center" }}>
-                      <Checkbox size="small" sx={{ ml: -6.5 }} color='secondary'/>
-
+                      <Checkbox
+                        size="small"
+                        sx={{ ml: -6.5 }}
+                        color="secondary"
+                      />
                       <Avatar
                         sx={{ width: "2rem", height: "2rem" }}
                         alt="Remy Sharp"
                         src={row.image}
                         variant="square"
                       />
-
+                      &nbsp;&nbsp;
                       <Box
                         sx={{
                           display: "flex",
@@ -209,8 +184,14 @@ export default function StylesTable() {
                       </Box>
                     </Box>
                   </TableCell>
-                  <TableCell align="left">Code:{row.code}</TableCell>
-                  <TableCell align="left">Hierarchy:{row.hierarchy}</TableCell>
+                  <TableCell align="left">
+                    <b>Code:</b>
+                    {row.code}
+                  </TableCell>
+                  <TableCell align="left">
+                    <b>Hierarchy:</b>
+                    {row.hierarchy}
+                  </TableCell>
                   <TableCell align="left">{row.complete}% Complete</TableCell>
                   <TableCell align="right">
                     <Button
@@ -223,13 +204,16 @@ export default function StylesTable() {
                         backgroundColor: theme.palette.secondary.light,
                         ":hover": {
                           backgroundColor: "secondary.main",
-                      },
+                        },
                       }}
                     >
                       <Typography
-                        sx={{ color: theme.palette.secondary.main,":hover": {
-                          color:'white'
-                      },}}
+                        sx={{
+                          color: theme.palette.secondary.main,
+                          ":hover": {
+                            color: "white",
+                          },
+                        }}
                         variant="caption"
                       >
                         <b>{row.published}</b>

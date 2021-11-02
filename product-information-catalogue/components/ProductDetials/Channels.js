@@ -1,3 +1,8 @@
+//react
+import React from "react";
+
+
+//material-ui
 import {
   Avatar,
   Button,
@@ -21,20 +26,34 @@ import {
   Typography,
 } from "@mui/material";
 import { Box, height } from "@mui/system";
-import React from "react";
 import CommentIcon from "@mui/icons-material/Comment";
 import { useTheme } from "@mui/material/styles";
 
-function createData(name,images) {
-  return { name,images };
+function createData(name, images) {
+  return { name, images };
 }
 
 const rows = [
-  createData("Deutschland/NOK","https://images.unsplash.com/photo-1505170726118-98436a741f17?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzJ8fGZsYWdzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"),
-  createData("Ice cream sandwich","https://images.unsplash.com/photo-1562917947-859259de851c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTJ8fGZsYWdzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"),
-  createData("Eclair","https://images.unsplash.com/photo-1533699224246-6dc3b3ed3304?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nzl8fGZsYWdzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"),
-  createData("Cupcake","https://images.unsplash.com/photo-1619115439824-11e07e2af5e9?ixid=MnwxMjA3fDB8MHxzZWFyY2h8ODd8fGZsYWdzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"),
-  createData("Gingerbread","https://images.unsplash.com/photo-1562917947-859259de851c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTJ8fGZsYWdzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"),
+  createData(
+    "Deutschland/NOK",
+    "https://images.unsplash.com/photo-1505170726118-98436a741f17?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzJ8fGZsYWdzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+  ),
+  createData(
+    "Ice cream sandwich",
+    "https://images.unsplash.com/photo-1562917947-859259de851c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTJ8fGZsYWdzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+  ),
+  createData(
+    "Eclair",
+    "https://images.unsplash.com/photo-1533699224246-6dc3b3ed3304?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nzl8fGZsYWdzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+  ),
+  createData(
+    "Cupcake",
+    "https://images.unsplash.com/photo-1619115439824-11e07e2af5e9?ixid=MnwxMjA3fDB8MHxzZWFyY2h8ODd8fGZsYWdzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+  ),
+  createData(
+    "Gingerbread",
+    "https://images.unsplash.com/photo-1562917947-859259de851c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTJ8fGZsYWdzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+  ),
 ];
 
 function Channels() {
@@ -66,7 +85,7 @@ function Channels() {
         </Typography>
         <Typography variant="subtitle2">Publish to:</Typography>
         <Typography variant="subtitle2">
-          <Checkbox fontSize="small" color='secondary'/>
+          <Checkbox fontSize="small" color="secondary" />
           CUBES ONLINE
         </Typography>
       </Box>
@@ -81,7 +100,7 @@ function Channels() {
               >
                 <TableCell component="th" scope="row">
                   <Box sx={{ display: "flex", alignItems: "center" }}>
-                    <Checkbox size="small" color='secondary'/>
+                    <Checkbox size="small" color="secondary" />
                     <Avatar
                       variant="square"
                       sizes="small"
@@ -92,8 +111,10 @@ function Channels() {
                   </Box>
                 </TableCell>
 
-                <TableCell align="right" >
-                  <Button sx={{color:theme.palette.secondary.main}}>preview</Button>
+                <TableCell align="right">
+                  <Button sx={{ color: theme.palette.secondary.main }}>
+                    preview
+                  </Button>
                 </TableCell>
               </TableRow>
             ))}
