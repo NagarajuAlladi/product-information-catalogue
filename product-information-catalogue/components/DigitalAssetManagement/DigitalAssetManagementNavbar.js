@@ -24,7 +24,7 @@ function DigitalAssetManagementNavbar() {
         }}
       >
         <Typography variant="h5" >
-          <b>DigitalAssetManagement</b>
+          <b>Digital Asset Management</b>
         </Typography>
         <div>
           <Button

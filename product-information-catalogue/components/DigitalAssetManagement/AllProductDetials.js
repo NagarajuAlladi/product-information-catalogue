@@ -12,6 +12,7 @@ import { Box } from "@mui/material";
 //styles
 // import styles from "../../styles/css/Onboarding/MediaCard.module.css";
 import ProductsList from "./ProductsList";
+import { useSelector } from "react-redux";
 
 const mediaCards = [
     {
@@ -111,8 +112,13 @@ const mediaCards = [
   ,comments:'1'
 },
 ];
+
+
+
 function MediaCard() {
-  console.log(mediaCards.title)
+  // console.log(mediaCards.title)
+  // const media = useSelector(state => state.media);
+//   console.log("media Reducer is",media)
     return (
         <div>
             <Box sx={{display:'grid',gridTemplateColumns:'repeat(auto-fit, minmax(250px, 1fr))',gridGap:'20px'}}>

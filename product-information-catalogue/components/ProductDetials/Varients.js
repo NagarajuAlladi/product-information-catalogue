@@ -24,18 +24,17 @@ function Varients() {
   // );
   const [brand, setBrand] = React.useState("");
   const [country, setCountry] = React.useState("");
-  const [complete,setComplete]=React.useState("")
-
+  const [complete, setComplete] = React.useState("");
 
   const handleChangeBrand = (event) => {
     setBrand(event.target.value);
   };
-  const handleChangeCountry=(event)=>{
-    setCountry(e.target.value);
-  }
-  const handleChangeComplete=(event)=>{
-    setCountry(e.target.value);
-  }
+  const handleChangeCountry = (eventCountry) => {
+    setCountry(eventCountry.target.value);
+  };
+  const handleChangeComplete = (eventComplete) => {
+    setCountry(eventComplete.target.value);
+  };
   const theme = useTheme();
   return (
     <Box sx={{ mt: "1rem" }}>
@@ -115,21 +114,6 @@ function Varients() {
         </Grid>
         <Grid item xs={7}>
           <Box sx={{ display: "flex" }}>
-            {/* <Box
-              sx={{
-                border: "1px solid gray",
-                width: "12rem",
-                height: "3rem",
-                display: "flex",
-                p: "0.1rem 0.5rem",
-                justifyContent: "space-between",
-                alignItems: "center",
-                mr: "1rem",
-              }}
-            >
-              <Typography variant="">Norge/NOK</Typography>
-              <ArrowDropDownTwoToneIcon />
-            </Box> */}
             <Box>
               <Select
                 labelId="demo-simple-select-label"
@@ -139,37 +123,25 @@ function Varients() {
                 onChange={handleChangeCountry}
                 sx={{ width: "13rem", height: "3rem", mr: "0.5rem" }}
               >
-                <MenuItem disabled value="">
-            <em>Norge/NOK</em>
-          </MenuItem>
+                <MenuItem  value="">
+                  Norge/NOK
+                </MenuItem>
                 <MenuItem value={10}>Filter</MenuItem>
                 <MenuItem value={20}>Filter</MenuItem>
                 <MenuItem value={30}>Filter</MenuItem>
               </Select>
             </Box>
-            {/* <Box
-              sx={{
-                border: "1px solid gray",
-                width: "12rem",
-                height: "3rem",
-                display: "flex",
-                p: "0.1rem 0.5rem",
-                justifyContent: "space-between",
-                alignItems: "center",
-              }}
-            >
-              <Typography variant="">80%Complete</Typography>
-              <MoreVertIcon fontSize="small" />
-            </Box> */}
+
             <Box>
               <Select
                 labelId="demo-simple-select-label"
                 id="demo-simple-select"
+                displayEmpty
                 value={complete}
                 onChange={handleChangeComplete}
                 sx={{ width: "13rem", height: "3rem" }}
               >
-                <MenuItem value={10}>Filter</MenuItem>
+                <MenuItem value="">80% complete</MenuItem>
                 <MenuItem value={20}>Filter</MenuItem>
                 <MenuItem value={30}>Filter</MenuItem>
               </Select>

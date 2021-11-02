@@ -16,9 +16,11 @@ import DigitalAssetManagementNavbar from "../DigitalAssetManagement/DigitalAsset
 import DigitalAssetManagementSearchbar from "../DigitalAssetManagement/DigitalAssetManagementSearchbar";
 import AllProductsTab from "../DigitalAssetManagement/AllMediaTab";
 import AllMediaTab from "../DigitalAssetManagement/AllMediaTab";
+import { useRouter } from "next/router";
 
 function Sidenav() {
   const theme = useTheme();
+  const router = useRouter();
   const [currentNavigation, setCurrentNavigation] = useState("Home");
   return (
     <>
@@ -38,104 +40,85 @@ function Sidenav() {
           </ListItem>
           <ListItem>
             <HomeIcon
-              onClick={() => {
-                setCurrentNavigation("Home");
-              }}
               sx={{
                 color: "white",
+                // color: router.pathname === ("/" && 'primary.light'),
                 mt: "1rem",
+                ":hover": {
+                  bgcolor: "rgba(0, 0, 0, 0.15)",
+                },
                 cursor: "pointer",
-                color:
-                  currentNavigation === "Home"
-                    ? theme.palette.primary.main
-                    : "white",
               }}
+              onClick={() => router.push("/home")}
             />
           </ListItem>
           <ListItem>
             <LabelOffIcon
-              onClick={() => {
-                setCurrentNavigation("Label");
-              }}
               sx={{
                 color: "white",
+                // color: router.pathname === "/products" && 'primary.light',
                 mt: "1rem",
+                ":hover": {
+                  bgcolor: "rgba(0, 0, 0, 0.15)",
+                },
                 cursor: "pointer",
-                color:
-                  currentNavigation === "Label"
-                    ? theme.palette.primary.main
-                    : "white",
               }}
+              onClick={() => router.push("/products")}
             />
           </ListItem>
           <ListItem>
             <ImageIcon
-              onClick={() => {
-                setCurrentNavigation("Image");
-              }}
               sx={{
                 color: "white",
+                // color: router.pathname === "/digitalAssetManagement" && 'primary.light',
                 mt: "1rem",
+                ":hover": {
+                  bgcolor: "rgba(0, 0, 0, 0.15)",
+                },
                 cursor: "pointer",
-                color:
-                  currentNavigation === "Image"
-                    ? theme.palette.primary.main
-                    : "white",
               }}
+              onClick={() => router.push("/digitalAssetManagement")}
             />
           </ListItem>
           <ListItem>
             <ArrowCircleUpIcon
-              onClick={() => {
-                setCurrentNavigation("Arrow");
-              }}
               sx={{
                 color: "white",
                 mt: "1rem",
+                ":hover": {
+                  bgcolor: "rgba(0, 0, 0, 0.15)",
+                },
                 cursor: "pointer",
-                color:
-                  currentNavigation === "Arrow"
-                    ? theme.palette.primary.main
-                    : "white",
               }}
             />
           </ListItem>
           <ListItem>
             <GridViewIcon
-              onClick={() => {
-                setCurrentNavigation("View");
-              }}
               sx={{
                 color: "white",
                 mt: "1rem",
+                ":hover": {
+                  bgcolor: "rgba(0, 0, 0, 0.15)",
+                },
                 cursor: "pointer",
-                color:
-                  currentNavigation === "View"
-                    ? theme.palette.primary.main
-                    : "white",
               }}
             />
           </ListItem>
           <ListItem>
             <EqualizerIcon
-              onClick={() => {
-                setCurrentNavigation("Equilizer");
-              }}
               sx={{
                 color: "white",
                 mt: "1rem",
+                ":hover": {
+                  bgcolor: "rgba(0, 0, 0, 0.15)",
+                },
                 cursor: "pointer",
-                
-                color:
-                  currentNavigation === "Equilizer"
-                    ? theme.palette.primary.main
-                    : "white",
               }}
             />
           </ListItem>
         </List>
       </div>
-      {currentNavigation === "Home" ? (
+      {/* {currentNavigation === "Home" ? (
         <>
           <h1 style={{ marginLeft: "5rem" }}>HomeIcon</h1>
         </>
@@ -166,7 +149,7 @@ function Sidenav() {
         <>
           <h1 style={{ marginLeft: "5rem" }}>Equilizer</h1>
         </>
-      ) : null}
+      ) : null} */}
     </>
   );
 }

@@ -1,0 +1,2 @@
+export const SET_MEDIA_INFO="SET_MEDIA_INFO";
+export const RESET_MEDIA_INFO="RESET_MEDIA_INFO";
