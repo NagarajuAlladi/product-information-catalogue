@@ -8,7 +8,7 @@ import InputBase from "@mui/material/InputBase";
 import SearchIcon from "@mui/icons-material/Search";
 import ArrowDropDownTwoToneIcon from "@mui/icons-material/ArrowDropDownTwoTone";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
-import LightbulbIcon from "@mui/icons-material/Lightbulb";
+import LightbulbOutlinedIcon from "@mui/icons-material/LightbulbOutlined";
 import { Box } from "@mui/system";
 
 const Search = styled("div")(({ theme }) => ({
@@ -53,7 +53,7 @@ function Searchbar() {
   const theme = useTheme();
   return (
     <Box sx={{ mt: "1rem" }}>
-      <Box sx={{ display: "flex", alignItems: "center" }}>
+      <Box sx={{ display: "flex", alignItems: "flex-start" }}>
         <Select
           labelId="demo-simple-select-label"
           id="demo-simple-select"
@@ -61,7 +61,7 @@ function Searchbar() {
           sx={{ borderRadius: "0px" }}
           displayEmpty
           onChange={handleChange}
-          sx={{ width: "15rem", height: "3rem" }}
+          sx={{ width: "15rem", height: "2.5rem" }}
         >
           <MenuItem disabled value="">
             Filter
@@ -74,7 +74,7 @@ function Searchbar() {
           sx={{
             border: "1px solid gray",
             width: "100%",
-            height: "3rem",
+            height: "2.5rem",
             display: "flex",
             alignItems: "center",
           }}
@@ -87,6 +87,19 @@ function Searchbar() {
         </Box>
         <Box>
           <MoreVertIcon />
+        </Box>
+        <Box
+          sx={{
+            width: "4rem",
+            height: "3rem",
+            backgroundColor: theme.palette.primary.main,
+            display:'flex',
+            justifyContent:'center',
+            alignItems:'center',
+            ml:'1rem'
+          }}
+        >
+         <LightbulbOutlinedIcon color='secondary' fontSize='small'/>
         </Box>
       </Box>
     </Box>

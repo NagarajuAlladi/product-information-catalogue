@@ -51,10 +51,7 @@ function Sidenav() {
               sx={{
                 // color: "white",
                 color:
-                  router.pathname ===
-                  "/products"
-                    ? "secondary.main"
-                    : "white",
+                  router.pathname === "/products" ? "secondary.main" : "white",
                 mt: "1rem",
                 cursor: "pointer",
               }}
