@@ -48,13 +48,13 @@ function Overview() {
           <Box
             sx={{
               width: "13rem",
-              height: "24rem",
+              height: "25rem",
               backgroundColor: theme.palette.primary.main,
               ml: "2rem",
               p: "1rem",
             }}
           >
-            <Box sx={{ display: "flex" }}>
+            <Box sx={{ display: "flex"}}>
               <LightbulbOutlinedIcon sx={{ ml: -1,color: theme.palette.secondary.main }} />
               <Typography variant="subtitle2" sx={{ color: "white" }}>
                &nbsp; Insights
@@ -88,7 +88,8 @@ function Overview() {
                 size="small"
                 sx={{
                   width: "5rem",
-                  mt: "0.5rem",
+                  mt: "1rem",
+                  mb:'0.8rem',
                   ml:-1,
                   backgroundColor: theme.palette.secondary.main,
                   ":hover": {
@@ -101,7 +102,7 @@ function Overview() {
               </Button>
             </Box>
             <Divider sx={{backgroundColor:'white'}}/>
-            <Typography variant="subtitle2" color="white">
+            <Typography variant="subtitle2" color="white" mt='0.5rem'>
               Impact
             </Typography>
             {/* <Select
