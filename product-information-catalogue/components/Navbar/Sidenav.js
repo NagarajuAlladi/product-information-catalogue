@@ -52,7 +52,7 @@ function Sidenav() {
                 // color: "white",
                 color:
                   router.pathname ===
-                  ("/products" && "/overview" && "/products")
+                  "/products"
                     ? "secondary.main"
                     : "white",
                 mt: "1rem",

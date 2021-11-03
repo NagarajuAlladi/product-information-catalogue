@@ -17,6 +17,7 @@ import ArrowDropDownTwoToneIcon from "@mui/icons-material/ArrowDropDownTwoTone";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import { TreeItem, TreeView } from "@mui/lab";
 import { useTheme } from "@mui/material/styles";
+import LightbulbOutlinedIcon from "@mui/icons-material/LightbulbOutlined";
 
 //components
 import GeneralInformation from "./GeneralInformation";
@@ -156,8 +157,9 @@ function Varients() {
                 onChange={handleChangeComplete}
                 sx={{ width: "13rem", height: "3rem" }}
               >
-                <MenuItem value="">80% complete
-                <LinearProgress variant="determinate" color='secondary'/>
+                <MenuItem value="">
+                  80% complete
+                  <LinearProgress variant="determinate" color="secondary" />
                 </MenuItem>
                 <MenuItem value={20}>Filter</MenuItem>
                 <MenuItem value={30}>Filter</MenuItem>
@@ -209,12 +211,43 @@ function Varients() {
           <Box
             sx={{
               height: "15rem",
-              backgroundColor: theme.palette.secondary.main,
+              backgroundColor: theme.palette.primary.main,
+              padding: "1rem",
               ml: "2rem",
               mt: "1rem",
             }}
           >
-            Hello
+            <Box sx={{ display: "flex" }}>
+              <LightbulbOutlinedIcon
+                sx={{ ml: -1, color: theme.palette.secondary.main }}
+              />
+              <Typography variant="subtitle2" sx={{ color: "white" }}>
+                &nbsp; Insights
+              </Typography>
+            </Box>
+            <Typography variant="caption" color="white" >
+              {" "}
+              We found these keywords to work wonders in description of similar
+              products
+            </Typography>
+            <Box sx={{display:'flex',alignItems:'center'}}>
+              <Typography variant='h6' sx={{color:theme.palette.secondary.main,pr:'0.5rem'}}>Silm</Typography>
+              <Typography variant='caption' sx={{color:theme.palette.secondary.main,pr:'0.5rem'}}>winter</Typography>
+              <Typography variant='h4' sx={{color:theme.palette.secondary.main,pr:'0.5rem'}}>Soft</Typography>
+              <Typography variant='caption' sx={{color:theme.palette.secondary.main,pr:'0.5rem'}}>Sweat</Typography>
+            </Box>
+            <Box sx={{display:'flex',alignItems:'center'}}>
+              {/* <Typography variant='h6' sx={{color:theme.palette.secondary.main,pr:'0.5rem'}}>Silm</Typography> */}
+              <Typography variant='caption' sx={{color:theme.palette.secondary.main,pr:'0.5rem'}}>Warm</Typography>
+              <Typography variant='h6' sx={{color:theme.palette.secondary.main,pr:'0.5rem'}}>Flowers</Typography>
+              <Typography variant='caption' sx={{color:theme.palette.secondary.main,pr:'0.5rem'}}>patterned</Typography>
+            </Box>
+            <Box sx={{display:'flex',alignItems:'center'}}>
+              {/* <Typography variant='h6' sx={{color:theme.palette.secondary.main,pr:'0.5rem'}}>Silm</Typography> */}
+              <Typography variant='h6' sx={{color:theme.palette.secondary.main,pr:'0.5rem'}}>Top</Typography>
+              <Typography variant='caption' sx={{color:theme.palette.secondary.main,pr:'0.5rem'}}>Long sealved</Typography>
+              <Typography variant='caption' sx={{color:theme.palette.secondary.main,pr:'0.5rem'}}>patterned</Typography>
+            </Box>
           </Box>
         </Grid>
       </Grid>
