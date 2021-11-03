@@ -1,5 +1,3 @@
-
-
 //react
 import * as React from "react";
 
@@ -49,12 +47,18 @@ const rows = [
 export default function OverviewTable() {
   const theme = useTheme();
   return (
-    <TableContainer component={Paper}>
+    <TableContainer
+      component={Paper}
+      sx={{
+        boxShadow:
+          "rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px",
+      }}
+    >
       <Table size="small" sx={{ minWidth: "auto" }} aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell>VARIENT</TableCell>
-            <TableCell align="right">LAST EDITED</TableCell>
+            <TableCell><small>VARIENT</small></TableCell>
+            <TableCell align="right"><small>LAST EDITED</small></TableCell>
             <TableCell align="right">
               <Box
                 sx={{
@@ -63,7 +67,7 @@ export default function OverviewTable() {
                   justifyContent: "flex-end",
                 }}
               >
-                OVERALL COMPLETENESS &nbsp;
+               <small> OVERALL COMPLETENESS</small> &nbsp;
                 <InfoOutlinedIcon
                   fontSize="small"
                   sx={{ color: "hsla(161, 100%, 37%, 1)" }}
